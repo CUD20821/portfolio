@@ -1,0 +1,13 @@
+.card-sub-project {
+  background-color: white;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid blue;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.content{
+  flex: 1 1;
+}
