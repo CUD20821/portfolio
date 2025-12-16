@@ -17,7 +17,7 @@ export default async function Page({
   if (!dataContent) return <div>nodata</div>;
   return (
     <div>
-      <h1>Project Detail</h1>
+      <h1>Project Detail2</h1>
       <div className="markdown-content">
         <ReactMarkdown>{dataContent.content}</ReactMarkdown>
       </div>

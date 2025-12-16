@@ -1,8 +1,11 @@
+
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/component/Header";
 import Footer from "@/component/Footer";
+import { ThemeProvider } from "next-themes";
+import ThemeSwitcher from "@/component/ThemeSwitcher";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -26,9 +29,12 @@ export default function RootLayout({
       </header>
       <html lang="en">
         <body>
-          <Header />
-          <div className="wrap"> {children}</div>
-          <Footer />
+          <ThemeProvider>
+            <Header />
+            <ThemeSwitcher />
+            <div className="wrap"> {children}</div>
+            <Footer />
+          </ThemeProvider>
         </body>
       </html>
     </>
