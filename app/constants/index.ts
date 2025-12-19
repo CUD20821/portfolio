@@ -84,4 +84,37 @@ const dataMainProject = [
   },
 ];
 
-export { dataHome, dataExperience, dataMainProject };
+const dataAbout = [
+  {
+    id: 1,
+    date: "2022",
+    title: "Sample1",
+    description: "Sample1",
+  },
+    {
+    id: 2,
+    date: "2023",
+    title: "Sample2",
+    description: "Sample2",
+  },
+    {
+    id: 3,
+    date: "2024",
+    title: "Sample3",
+    description: "Sample1",
+  },
+    {
+    id: 4,
+    date: "2025",
+    title: "Sample4",
+    description: "Sample4",
+  },
+    {
+    id: 5,
+    date: "2026",
+    title: "Sample5",
+    description: "Sample5",
+  },
+];
+
+export { dataHome, dataExperience, dataMainProject, dataAbout };

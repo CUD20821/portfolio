@@ -1,0 +1,26 @@
+.timeLineFrame {
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  width: min-content;
+  position: relative;
+}
+
+.timeLineTitle {
+  margin: 0 0 32px;
+}
+
+.timeLineItems {
+  display: flex;
+  height: 100%;
+}
+
+.timeLineCol {
+  width: 120px;
+  height: 100%;
+  border-left: 1px solid black;
+}
+
+.timeLineCol span {
+  padding-left: 2px;
+}

@@ -1,0 +1,7 @@
+.timeLineBody {
+  display: flex;
+  overflow-x: auto;
+  padding-bottom: 16px;
+  padding-top: 16px;
+  position: relative;
+}
