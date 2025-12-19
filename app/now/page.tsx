@@ -28,44 +28,22 @@ const Now: React.FC = () => {
   const [dataTimeLine, setDataTimeLine] = useState<any[]>([]);
 
   useEffect(() => {
-    // const generateQuarterlyTimeline = () => {
-    //   const result = [];
-    //   const start = new Date(MIN_DATE);
-    //   const now = new Date();
-
-    //   const current = new Date(start);
-
-    //   while (current <= now) {
-    //     const year = current.getFullYear();
-    //     const quater = Math.floor(current.getMonth() / 3) + 1; // getMonth() => 0 ~ 11(zero based)
-
-    //     result.push({ year, quater });
-
-    //     // Go to next quarter
-    //     current.setMonth(current.getMonth() + 3);
-    //   }
-
-    //   return result;
-    // };
-
     const generateQuarterlyTimeline = () => {
       const result = [];
       const current = new Date(MAX_DATE);
-      const end = new Date(MIN_DATE)
-      // const current = new Date(dateStr)
+      const end = new Date(MIN_DATE);
 
-      while(end <= current) {
+
+      while (end <= current) {
         const year = current.getFullYear();
         const quarter = Math.floor(current.getMonth() / 3) + 1;
 
-        result.push({year, quarter})
+        result.push({ year, quarter });
 
         current.setMonth(current.getMonth() - 3);
       }
       return result;
-    }
-
-
+    };
 
     //   while(current <= start) {
     //     const year = start.getFullYear();
@@ -78,27 +56,28 @@ const Now: React.FC = () => {
     // }
 
     const data = generateQuarterlyTimeline();
-    console.log("data ", data)
+    console.log("data ", data);
     setDataTimeLine(data);
   }, []);
 
-  const generateX = (dateStr: string) => {
-    const yearOfMIn = new Date(MIN_DATE).getFullYear() + 0;
-    const subMonth =
-      (new Date(dateStr).getFullYear() - yearOfMIn) * 12 +
-      Number(new Date(dateStr).getMonth());
-    return 120 * subMonth;
-  };
+  // const generateX = (dateStr: string) => {
+  //   const yearOfMIn = new Date(MIN_DATE).getFullYear() + 0;
+  //   const subMonth =
+  //     (new Date(dateStr).getFullYear() - yearOfMIn) * 12 +
+  //     Number(new Date(dateStr).getMonth());
+  //   return 120 * subMonth;
+  // };
 
   const generateX1 = (dateStr: string) => {
     const yearOfMIn = new Date(MAX_DATE).getFullYear() + 0;
-    const monthOfMax =  new Date(MAX_DATE).getMonth() + 0;
+    const monthOfMax = new Date(MAX_DATE).getMonth() + 0;
     const monthOfCurrent = new Date(dateStr).getMonth() + 0;
     const subMonth =
       // (new Date(dateStr).getFullYear() - yearOfMIn) * 12 +
       // Number(new Date(dateStr).getMonth());
-      (yearOfMIn - new Date(dateStr).getFullYear()) * 12 + (monthOfMax - monthOfCurrent);
-      console.log("subMonth ", subMonth)
+      (yearOfMIn - new Date(dateStr).getFullYear()) * 12 +
+      (monthOfMax - monthOfCurrent);
+    console.log("subMonth ", subMonth);
     return 120 * subMonth;
   };
 
@@ -125,8 +104,8 @@ const Now: React.FC = () => {
             start={item.start}
             end={item.end}
             // x={generateX(item.start)}
-            y={generateY(item.index)}
             x={generateX1(item.end)}
+            y={generateY(item.index)}
           />
         ))}
       </div>

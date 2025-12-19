@@ -4,28 +4,76 @@ import Button from "@/component/Button";
 import { dataHome, dataExperience } from "./constants";
 
 export default function Home() {
+  const startYoe = new Date("2022-10-01");
+  const today = new Date();
+
+  let yoe = today.getFullYear() - startYoe.getFullYear();
+  const monthDiff = today.getMonth() - startYoe.getMonth();
+  if (
+    monthDiff < 0 ||
+    (monthDiff === 0 && today.getDate() < startYoe.getDate())
+  ) {
+    yoe--;
+  }
+
+  /*
+  today = 2025/11/02 
+  startYoe1 = 2022/10/01
+  startYoe2 = 2022/12/01
+  startYoe3 = 2022/11/01
+
+  => yoe = 2025 - 2022 = 3
+  => monthDiff1 = 11 - 10 = 1
+  => monthDiff2 = 11 - 12 = -1 -> chưa được 3 năm
+  => monthDiff3 = 11 - 11 = 0 && dateToday = 1 > dateStart = 2 => chưa được 3 năm
+  */
+
   return (
     <div>
-      <h1>What is Lorem Ipsum?</h1>
+      <h1>Xin chào, mình tên là Đức</h1>
       <p>
-        Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry. Lorem Ipsum has been the industrys standard dummy text ever
-        since the 1500s, when an unknown printer took a galley of type and
-        scrambled it to make a type specimen book. It has survived not only five
-        centuries, but also the leap into electronic typesetting, remaining
-        essentially unchanged. It was popularised in the 1960s with the release
-        of Letraset sheets containing Lorem Ipsum passages, and more recently
-        with desktop publishing software like Aldus PageMaker including versions
-        of <span className="">VN</span> Ipsum.
+        Mình hiện đang làm việc ở vị trí{" "}
+        <span style={{ textDecoration: "underline" }}>
+          BrSE - Bridge Software Engineer
+        </span>
+        . Mình đã có <span>{yoe}</span>+ năm kinh nghiệm trong lĩnh vực offshore
+        software development.
+        <br />
+        <span style={{ display: "block", marginTop: "12px" }}></span>
+        Mảng chủ yếu mình tham gia là <b>Website Development</b> và lĩnh vực
+        kinh doanh
+        <br /> Với vai trò BrSE trong dự án, không chỉ mang nhiệm vụ truyền đạt
+        thông tin đúng và đủ, mình còn phải là người hỗ trợ trong việc quản lý
+        tiến độ công việc, đưa ra ý kiến về những vấn đề nhân sự trong team. Nói
+        chung là làm thợ đụng(ngoài code 🥲)
+        <span style={{ display: "block", marginTop: "12px" }}></span>
+        Mình <b>KHÔNG</b> phải xuất phát từ ngành CNTT, nhưng nhờ một vài sự
+        tình cờ, mình được tham gia vào một công ty IT mảng outsourcing khi mới
+        về Việt Nam, kể từ đó sự tò mò và hứng thú khi làm mảng Web Development
+        luôn được duy trì đến hiện tại 😁.
+        <span style={{ display: "block", marginTop: "12px" }}></span>
+        Vì luôn tò mò về công nghệ(vì không biết gì cả 😩), nên mình làm ra trang này để PR bản thân 🫣
+        nhưng cũng là nơi để ghi lại chặng đường của mình trong ngành này(sắp bị
+        AI cho cook nhưng mà thôi kệ 😂).
+        <div
+          style={{
+            backgroundColor: "#fff3cd",
+            borderLeft: "4px solid #ffeeba",
+            padding: "10px 15px",
+            marginTop: "15px",
+            borderRadius: "4px",
+            fontSize: "0.95rem",
+            color: "#856404",
+          }}
+        >
+          <strong>Lưu ý:</strong> Nội dung do mình tự nghĩ, không phải do AI viết 😤
+        </div>
       </p>
-
       <div className="content-parent">
         <div className="content-col-1">
           <div className="box">
             <div className="title">
-              <span>
-                Experience
-              </span>
+              <span>Experience</span>
             </div>
             <div className="sub-items">
               {dataExperience.map((item) => (
@@ -45,9 +93,7 @@ export default function Home() {
         <div className="content-col-2">
           <div className="box">
             <div className="title">
-              <span>
-                Projects
-              </span>
+              <span>Projects</span>
             </div>
             <div className="sub-items">
               <div className="sub-project-container">
