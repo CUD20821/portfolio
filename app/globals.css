@@ -93,3 +93,23 @@ a {
   color: #27ab83;
   text-decoration: underline;
 }
+
+.space-between-graph {
+  display: block;
+  margin-top: 12px;
+}
+
+.highlight {
+  color: #27ab83;
+  box-shadow: rgba(39, 171, 131, 0.19) 0px -1.3rem inset;
+}
+
+.note {
+  background-color: #fff3cd;
+  border-left: 4px solid #ffeeba;
+  padding: 10px 15px;
+  margin-top: 15px;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  color: #856404;
+}

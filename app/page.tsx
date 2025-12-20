@@ -33,40 +33,29 @@ export default function Home() {
       <h1>Xin chào, mình tên là Đức</h1>
       <p>
         Mình hiện đang làm việc ở vị trí{" "}
-        <span style={{ textDecoration: "underline" }}>
-          BrSE - Bridge Software Engineer
-        </span>
-        . Mình đã có <span>{yoe}</span>+ năm kinh nghiệm trong lĩnh vực offshore
+        <span className="highlight">BrSE - Bridge Software Engineer</span>. Mình
+        đã có <span>{yoe}</span>+ năm kinh nghiệm trong lĩnh vực offshore
         software development.
         <br />
-        <span style={{ display: "block", marginTop: "12px" }}></span>
-        Mảng chủ yếu mình tham gia là <b>Website Development</b> và lĩnh vực
-        kinh doanh
+        <span className="space-between-graph"></span>
+        Mảng chủ yếu mình tham gia là{" "}
+        <span className="highlight">Website Development</span> và business
+        domain chủ yếu là <span className="highlight">Bảo hiểm</span>
         <br /> Với vai trò BrSE trong dự án, không chỉ mang nhiệm vụ truyền đạt
         thông tin đúng và đủ, mình còn phải là người hỗ trợ trong việc quản lý
         tiến độ công việc, đưa ra ý kiến về những vấn đề nhân sự trong team. Nói
         chung là làm thợ đụng(ngoài code 🥲)
-        <span style={{ display: "block", marginTop: "12px" }}></span>
+        <span className="space-between-graph"></span>
         Mình <b>KHÔNG</b> phải xuất phát từ ngành CNTT, nhưng nhờ một vài sự
         tình cờ, mình được tham gia vào một công ty IT mảng outsourcing khi mới
         về Việt Nam, kể từ đó sự tò mò và hứng thú khi làm mảng Web Development
         luôn được duy trì đến hiện tại 😁.
-        <span style={{ display: "block", marginTop: "12px" }}></span>
-        Vì luôn tò mò về công nghệ(vì không biết gì cả 😩), nên mình làm ra trang này để PR bản thân 🫣
-        nhưng cũng là nơi để ghi lại chặng đường của mình trong ngành này(sắp bị
-        AI cho cook nhưng mà thôi kệ 😂).
-        <div
-          style={{
-            backgroundColor: "#fff3cd",
-            borderLeft: "4px solid #ffeeba",
-            padding: "10px 15px",
-            marginTop: "15px",
-            borderRadius: "4px",
-            fontSize: "0.95rem",
-            color: "#856404",
-          }}
-        >
-          <strong>Lưu ý:</strong> Nội dung do mình tự nghĩ, không phải do AI viết 😤
+        <span className="space-between-graph"></span>
+        Vì luôn tò mò về công nghệ(vì không biết gì cả 😩), nên mình làm ra
+        trang này để PR bản thân 🫣 nhưng cũng là nơi để ghi lại chặng đường của
+        mình trong ngành này(sắp bị AI cho cook nhưng mà thôi kệ 😂).
+        <div className="note">
+          Nội dung do mình tự nghĩ, không phải do AI viết 😤
         </div>
       </p>
       <div className="content-parent">
