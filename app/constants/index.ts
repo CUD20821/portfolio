@@ -1,10 +1,10 @@
 /* eslint-disable import/no-anonymous-default-export */
-const dataHome = [
+const dataProjects = [
   {
     id: 1,
     image: "/personal.png",
     title: "Insurance",
-    description: "Insurance for device",
+    description: "Với vai trò là BrSE, trách nhiệm chính của tôi là truyền đạt thông tin dự án một cách rõ ràng với đối tác Nhật Bản để phần mềm được phát triển theo đúng yêu cầu của khách hàng. Đồng thời, tôi cũng phải là người tạo ra các tài liệu chi tiết để nhóm phát triển có thể triển khai chính xác; quản lý tình trạng dự án để cả hai nhóm có thể thấy rõ tiến độ của nhau.",
     url: "/projects/1",
   },
   {
@@ -21,22 +21,23 @@ const dataExperience = [
     id: 1,
     image: "/personal.png",
     position: "BrSE",
-    company: "teq",
-    duration: "2025 ~ 2026",
-    place: "HCM",
+    company: "Teqnological Asia",
+    startDate: "2024-05-01",
+    endDate: null,
+    place: "Thành phố Hồ Chí Minh, Việt Nam",
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      "Với vai trò là BrSE, trách nhiệm chính của tôi là truyền đạt thông tin dự án một cách rõ ràng với đối tác Nhật Bản để phần mềm được phát triển theo đúng yêu cầu của khách hàng. Đồng thời, tôi cũng phải là người tạo ra các tài liệu chi tiết để nhóm phát triển có thể triển khai chính xác; quản lý tình trạng dự án để cả hai nhóm có thể thấy rõ tiến độ của nhau.",
   },
-  {
-    id: 2,
-    image: "/personal.png",
-    position: "BrSE",
-    company: "qte",
-    duration: "2024 ~ 2025",
-    place: "HCM",
-    description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-  },
+  // {
+  //   id: 2,
+  //   image: "/personal.png",
+  //   position: "BrSE",
+  //   company: "qte",
+  //   duration: "2024 ~ 2025",
+  //   place: "HCM",
+  //   description:
+  //     "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+  // },
 ];
 
 const dataMainProject = [
@@ -117,4 +118,4 @@ const dataAbout = [
   },
 ];
 
-export { dataHome, dataExperience, dataMainProject, dataAbout };
+export { dataProjects, dataExperience, dataMainProject, dataAbout };

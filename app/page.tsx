@@ -1,7 +1,8 @@
 import SubProject from "@/component/Project/SubProject";
 import Experience from "@/component/Experience";
 import Button from "@/component/Button";
-import { dataHome, dataExperience } from "./constants";
+import { dataProjects, dataExperience } from "./constants";
+import { formatExperienceDuration } from "./utils";
 
 export default function Home() {
   const startYoe = new Date("2022-10-01");
@@ -47,7 +48,7 @@ export default function Home() {
         chung là làm thợ đụng(ngoài code 🥲)
         <span className="space-between-graph"></span>
         Mình <b>KHÔNG</b> phải xuất phát từ ngành CNTT, nhưng nhờ một vài sự
-        tình cờ, mình được tham gia vào một công ty IT mảng outsourcing khi mới
+        tình cờ, mình được tham gia vào một công ty IT outsourc cho thị trường Nhật khi mới
         về Việt Nam, kể từ đó sự tò mò và hứng thú khi làm mảng Web Development
         luôn được duy trì đến hiện tại 😁.
         <span className="space-between-graph"></span>
@@ -71,7 +72,7 @@ export default function Home() {
                   image={item.image}
                   position={item.position}
                   company={item.company}
-                  duration={item.duration}
+                  duration={formatExperienceDuration(item.startDate, item.endDate)}
                   place={item.place}
                   description={item.description}
                 />
@@ -86,7 +87,7 @@ export default function Home() {
             </div>
             <div className="sub-items">
               <div className="sub-project-container">
-                {dataHome.map((item) => (
+                {dataProjects.map((item) => (
                   <SubProject
                     key={item.id}
                     image={item.image}
