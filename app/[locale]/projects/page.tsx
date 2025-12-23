@@ -1,7 +1,7 @@
 
 import MainProject from "@/component/Project/MainProject";
-import { dataMainProject } from "../constants";
-import "@/app/projects/projects.css"
+import { dataMainProject } from "../../constants";
+import "./projects.css"
 
 export default function Projects(){
   return(
@@ -21,3 +21,4 @@ export default function Projects(){
     </div>
   )
 }
+

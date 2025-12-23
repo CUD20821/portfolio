@@ -1,11 +1,15 @@
+'use client';
+
 import SubProject from "@/component/Project/SubProject";
 import Experience from "@/component/Experience";
 import Button from "@/component/Button";
-import { dataProjects, dataExperience, dataSkill } from "./constants";
-import { formatExperienceDuration } from "./utils";
+import { dataProjects, dataExperience, dataSkill } from "../constants";
+import { formatExperienceDuration } from "../utils/formatExperienceDuration";
 import Skill from "@/component/Skill";
+import { useTranslations } from 'next-intl';
 
 export default function Home() {
+  const t = useTranslations('HomePage');
   const startYoe = new Date("2022-10-01");
   const today = new Date();
 
@@ -18,55 +22,32 @@ export default function Home() {
     yoe--;
   }
 
-  /*
-  today = 2025/11/02 
-  startYoe1 = 2022/10/01
-  startYoe2 = 2022/12/01
-  startYoe3 = 2022/11/01
-
-  => yoe = 2025 - 2022 = 3
-  => monthDiff1 = 11 - 10 = 1
-  => monthDiff2 = 11 - 12 = -1 -> chưa được 3 năm
-  => monthDiff3 = 11 - 11 = 0 && dateToday = 1 > dateStart = 2 => chưa được 3 năm
-  */
-
-
-
   return (
     <div>
-      <h1>Xin chào, mình tên là Đức</h1>
-      <p>
-        Mình hiện đang làm việc ở vị trí{" "}
-        <span className="highlight">BrSE - Bridge Software Engineer</span>. Mình
-        đã có <span>{yoe}</span>+ năm kinh nghiệm trong lĩnh vực offshore
-        software development.
+      <h1>{t('greeting')}</h1>
+      <div>
+        {t('intro')}{" "}
+        <span className="highlight">{t('position')}</span>. {t('experience', { yoe })}
         <br />
         <span className="space-between-graph"></span>
-        Mảng chủ yếu mình tham gia là{" "}
-        <span className="highlight">Website Development</span> và business
-        domain chủ yếu là <span className="highlight">Bảo hiểm</span>
-        <br /> Với vai trò BrSE trong dự án, không chỉ mang nhiệm vụ truyền đạt
-        thông tin đúng và đủ, mình còn phải là người hỗ trợ trong việc quản lý
-        tiến độ công việc, đưa ra ý kiến về những vấn đề nhân sự trong team. Nói
-        chung là làm thợ đụng(ngoài code 🥲)
+        {t('mainField')}{" "}
+        <span className="highlight">{t('webDevelopment')}</span> {t('businessDomain')}{" "}
+        <span className="highlight">{t('insurance')}</span>
+        <br /> 
+        {t('brseRole')}
         <span className="space-between-graph"></span>
-        Mình <b>KHÔNG</b> phải xuất phát từ ngành CNTT, nhưng nhờ một vài sự
-        tình cờ, mình được tham gia vào một công ty IT outsourc cho thị trường
-        Nhật khi mới về Việt Nam, kể từ đó sự tò mò và hứng thú khi làm mảng Web
-        Development luôn được duy trì đến hiện tại 😁.
+        {t('background')}
         <span className="space-between-graph"></span>
-        Vì luôn tò mò về công nghệ(vì không biết gì cả 😩), nên mình làm ra
-        trang này để PR bản thân 🫣 nhưng cũng là nơi để ghi lại chặng đường của
-        mình trong ngành này(sắp bị AI cho cook nhưng mà thôi kệ 😂).
-        <div className="note">
-          Nội dung do mình tự nghĩ, không phải do AI viết 😤
-        </div>
-      </p>
+        {t('purpose')}
+        <p className="note">
+          {t('note')}
+        </p>
+      </div>
       <div className="content-parent">
         <div className="content-col-1">
           <div className="box">
             <div className="title">
-              <span>Experience</span>
+              <span>{t('experienceTitle')}</span>
             </div>
             <div className="sub-items">
               {dataExperience.map((item) => (
@@ -89,7 +70,7 @@ export default function Home() {
         <div className="content-col-2">
           <div className="box">
             <div className="title">
-              <span>Projects</span>
+              <span>{t('projectsTitle')}</span>
             </div>
             <div className="sub-items">
               <div className="sub-project-container">
@@ -106,14 +87,14 @@ export default function Home() {
             </div>
             <div>
               <Button
-                text={"See all projects"}
+                text={t('seeAllProjects')}
                 type={"readmore"}
                 url={"/projects"}
               />
             </div>
           </div>
           <div className="box">
-            <p className="title">Skills</p>
+            <p className="title">{t('skillsTitle')}</p>
             <div className="skill-items">
               {dataSkill.map((item) => (
                 <Skill key={item.id} name={item.name} />
@@ -125,3 +106,4 @@ export default function Home() {
     </div>
   );
 }
+

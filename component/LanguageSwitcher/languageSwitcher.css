@@ -1,0 +1,27 @@
+.styles_changeLanguage {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.styles_changeLanguage span {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  opacity: 0.6;
+}
+
+.styles_changeLanguage span:hover {
+  opacity: 1;
+}
+
+.styles_changeLanguage span.active-lang {
+  opacity: 1;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.styles_changeLanguage p {
+  margin: 0;
+  opacity: 0.4;
+}
+

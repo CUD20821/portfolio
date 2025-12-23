@@ -1,10 +1,10 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import Link from "next/link";
+import { Link, usePathname } from "@/i18n/routing";
 import "@/app/styles/header.css";
 import Image from "next/image";
-import { usePathname } from "next/navigation"; // 1. Import usePathname
 import ThemeSwitcher from "../ThemeSwitcher";
+import LanguageSwitcher from "../LanguageSwitcher";
 
 const dataMenu = [
   {
@@ -84,11 +84,7 @@ const Header: React.FC = () => {
         </ul>
       </nav>
       <div className="styles_ctnRightHeader">
-        <div className="styles_changeLanguage">
-          <span>EN</span>
-          <p>/</p>
-          <span>JP</span>
-        </div>
+        <LanguageSwitcher />
         <ThemeSwitcher />
       </div>
     </div>
