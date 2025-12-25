@@ -59,11 +59,30 @@ Dự án được bên mình tiếp nhận vào giữa năm 2025 để đáp ứ
 
 3.&nbsp; Cả team Nhật và Việt đều là người mới và lần đầu làm việc chung, nên việc nắm bắt dự án và trao đổi ban đầu để thống nhất vấn đề cần thời gian. Nhưng nhờ ý thức về mức độ quan trọng của dự án của từng thành viên ở cả 2 team, cả 2 chỉ cần 1 tháng đã bắt nhịp cách làm việc với nhau.
 
-4.&nbsp; Team Việt được đảm nhận phần set up **sản phẩm**(phần quan trọng nhất để dự án có thể chạy, thật đấy không đùa 🫣) lần đầu tiên, nên đã có sự lo lắng nhất định. Nhưng nhờ sự tìm tòi và bằng cách "thử và sai" trước khi dự án bắt đầu 1.5 ~ 2 tháng, team đã tự tin cân mọi thể loại trường học 😤.
+4.&nbsp; Team Việt được đảm nhận phần set up **sản phẩm**(phần quan trọng nhất để dự án có thể chạy) lần đầu tiên, nên đã có sự lo lắng nhất định. Nhưng nhờ sự tìm tòi và bằng cách "thử và sai" trước khi dự án bắt đầu 1.5 ~ 2 tháng, team đã tự tin cân mọi thể loại trường học 😤.
 
-5.&nbsp; Team Nhật đã thể hiện mong muốn kết hợp lâu dài với bên Việt bằng 1 chuyến du hành qua Việt Nam khi dự án vừa chạy được... 0.5 tháng 😂. Mục tiêu của team Nhật là chia sẻ know-how về lĩnh vực bảo hiểm, về cách set up sản phẩm sao cho đúng và trúng, và quan trọng nhất là kết nối giữa người - người với nhau(ở 1 thế giới AI first thì điều này rất quan trọng đấy nhé!!)
+5.&nbsp; Team Nhật đã thể hiện mong muốn kết hợp lâu dài với bên Việt bằng 1 chuyến du hành qua Việt Nam khi dự án vừa chạy được... 0.5 tháng. Mục tiêu của team Nhật là chia sẻ know-how về lĩnh vực bảo hiểm, về cách set up sản phẩm sao cho đúng và trúng, và quan trọng nhất là kết nối giữa người - người với nhau(ở 1 thế giới AI first thì điều này rất quan trọng!!)
 
 # III. Những điều đã đạt được
+1.&nbsp; Sự tin tưởng của phía Nhật Bản: 
+- Trực tiếp đảm nhận set up sản phẩm
+- 
+
+2.&nbsp; Tham gia nhiều hơn về mặt kỹ thuật: không phải trực tiếp viết code, nhưng tham gia nhiều hơn về quản lý tình hình thông qua Github và nhiều thứ khác
+- Trao đổi request, bug, etc trên `Discussions` của github
+- Set up sản phẩm bảo hiểm
+- 
+- Sử dụng `bot github-action` được tích hợp trong repo dự án để điều tra bug, tìm hiểu tài liệu dự án
+
+3.&nbsp; Cách tiếp cận dự án đã chạy lâu
+- Kết hợp giữa cách làm `thủ công(đọc tài liệu, sử dụng trực tiếp sản phẩm , tương tác trực tiếp qua slack)` để nắm tổng quát về dự án và logic business, đồng thời dùng `AI(tra repo, tra business)` để có thể nắm thông tin về logic của màn hình, validation của từng fields
+- 
+
+4.&nbsp; Sắp xếp công việc khi có nhiều sản phẩm cần xử lý
+- Phân chia tài liệu DD theo từng category riêng để dễ dàng nắm bắt nội dung cần thiết nhanh nhất
+- Tận dụng chức năng `Documents` của backlogs để list up đầu công việc và báo cáo theo format đơn giản theo khoảng thời gian: tuần này, tuần sau
+- Chủ động trao đổi với PM Việt Nam để nắm tình hình nội bộ, từ đó để làm cơ sở trao đổi và sắp xếp bên Nhật
+
 
 <---ja--->
 ## I. 概要

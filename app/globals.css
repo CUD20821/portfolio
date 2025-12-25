@@ -58,8 +58,7 @@ a {
   width: 100vw;
   max-width: 1024px;
   margin: 0 auto;
-  height: auto;
-  min-height: 100vh;
+  min-height: calc(100vh - 130px);
   padding: 80px 32px;
 }
 
@@ -116,7 +115,7 @@ a {
   color: #856404;
 }
 
-.skill-items{
+.skill-items {
   display: flex;
   /* flex-wrap: wrap; */
   overflow: hidden;
@@ -128,6 +127,15 @@ a {
   width: 100%;
 }
 
-.notFound{
-  background-color: red;
+.notFound {
+  /* background: #2a7b9b; */
+  background: linear-gradient(
+    90deg,
+    rgba(42, 123, 155, 1) 0%,
+    rgba(87, 199, 133, 1) 51%,
+    rgba(237, 221, 83, 1) 100%
+  );
+  width: 100vw;
+  height: 100vh;
+  margin: 0 auto;
 }
