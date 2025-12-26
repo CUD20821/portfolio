@@ -1,23 +1,19 @@
 ---
-id: "insurance-school1"
-titleVI: "Bảo hiểm trường học"
-descriptionVI: "Dự án bảo hiểm dành cho học sinh, dùng để đăng ký và quản lý hợp đồng bảo hiểm và đối tượng của sản phẩm trải dài từ cấp từ mẫu giáo đến đại học."
-titleJP: "学校・こども総合保険・・・学校に通う子供を持つ保護者が加入する保険"
-descriptionJP: "学校・こども総合保険・・・学校に通う子供を持つ保護者が加入する保険"
-link: "example.comn"
-tech: ["VueJS"]
-date: "2025-07-01"
+id: "insurance-school2"
+titleVI: ""
+descriptionVI: ""
+titleJP: ""
+descriptionEN: ""
+link: ""
+tech: ["NuxtJS", "SCSS"]
+date: "2021-04-03"
 slug: ""
 image: ""
-category: "Insurance Tech"
+category: "Insurance Tech2"
 ---
 <---vi--->
 # I. Giới thiệu chung
-Bảo hiểm trường học là tên chung của một dự án lớn, trong đó được chia thành nhiều phần nhỏ hơn tương ứng với mỗi ngôi trường để phù hợp cho nhu cầu của từng trường.
 
-Dự án được bắt đầu phát triển từ 10/2023, triển khai đầu tiên dành cho học sinh mầm non(園児). Sau đó, được mở rộng cho cấp 2 và cấp 3(中高連) các tháng tiếp theo. Dự án được release lần đầu tiên vào đầu năm 2024. Dự án thu hút được sự quan tâm và được triển khai đến cấp đại học(大学・大学院). 
-
-Dự án được bên mình tiếp nhận vào giữa năm 2025 để đáp ứng được số lượng trường ngày càng mở rộng.
 
 **Các thành phần chính của dự án:**
 - Trang đăng ký hợp đồng: Học sinh vào trang web của từng trường để tham khảo các loại hợp đồng mà mỗi nơi triển khai, từ đó chọn ra sản phẩm phù hợp và thực hiện thủ tục đăng ký qua form có sẵn
@@ -69,8 +65,7 @@ Dự án được bên mình tiếp nhận vào giữa năm 2025 để đáp ứ
 - 
 
 2.&nbsp; Tham gia nhiều hơn về mặt kỹ thuật: không phải trực tiếp viết code, nhưng tham gia nhiều hơn về quản lý tình hình thông qua Github và nhiều thứ khác
-- Trao đổi request, bug, etc trên `Discussions` của github
-- Set up sản phẩm bảo hiểm
+- Trao đổi request, bug, etc trên **Discussions** của github
 - 
 - Sử dụng `bot github-action` được tích hợp trong repo dự án để điều tra bug, tìm hiểu tài liệu dự án
 
@@ -79,9 +74,11 @@ Dự án được bên mình tiếp nhận vào giữa năm 2025 để đáp ứ
 - 
 
 4.&nbsp; Sắp xếp công việc khi có nhiều sản phẩm cần xử lý
-- Phân chia tài liệu DD theo từng category riêng để dễ dàng nắm bắt nội dung cần thiết nhanh nhất
+- Phân chia tài liệu DD theo từng category riêng để dễ dàng nắm bắt nội dung cần thiết một cách có hệ thống
 - Tận dụng chức năng `Documents` của backlogs để list up đầu công việc và báo cáo theo format đơn giản theo khoảng thời gian: tuần này, tuần sau
-- Chủ động trao đổi với PM Việt Nam để nắm tình hình nội bộ, từ đó để làm cơ sở trao đổi và sắp xếp bên Nhật
+- Chủ động trao đổi với PM Việt Nam để nắm tình hình nội bộ, từ đó để làm cơ sở trao đổi và sắp xếp công việc với bên Nhật
+
+5.&nbsp; 
 
 
 <---ja--->
