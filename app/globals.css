@@ -1,31 +1,36 @@
 :root {
   --viewbox: 1216px;
-  --main: #27ab83;
-  --text-1: #52525b;
-  --text-2: #27272a;
+  --main: #ff5c39;
+  --text-1: #71717a;
+  --text-2: #18181b;
   --text-3: #a1a1aa;
-  --border-color: #f4f4f5;
-  --bg-color: #fff;
+  --border-color: #e4e4e7;
+  --bg-color: #ffffff;
   --bg-root: #fafafa;
-  --bg-sub: #fff;
-  --bg-hover: #fafafa;
-  --bg-overlay: rgba(0, 0, 0, 0.5);
-  --shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+  --bg-sub: #f4f4f5;
+  --bg-hover: #e4e4e7;
+  --bg-overlay: rgba(0, 0, 0, 0.05);
+  --shadow: rgba(0, 0, 0, 0.08) 0px 3px 5px;
+  --chart-primary: #ff5c39;
+  --chart-secondary: #ff8a6b;
+  --chart-tertiary: #ff6b4a;
+  --chart-background: #e4e4e7;
+  --chart-accent: #ff4520;
 }
 
 [data-theme="dark"] {
   --viewbox: 1216px;
-  --main: #27ab83;
-  --text-1: #a1a1aa;
-  --text-2: #f4f4f5;
-  --text-3: #71717a;
-  --border-color: #3f3f4666;
-  --bg-color: #18181b;
-  --bg-root: #000;
-  --bg-sub: #252529;
-  --bg-hover: #202022;
-  --bg-overlay: rgba(255, 255, 255, 0.5);
-  --shadow: rgba(255, 255, 255, 0.04) 0px 3px 5px;
+  --main: #ff5c39;
+  --text-1: #a0a3b1;
+  --text-2: #ffffff;
+  --text-3: #6b6e7c;
+  --border-color: #4a4d5a;
+  --bg-color: #2a2d3a;
+  --bg-root: #000000;
+  --bg-sub: #3a3d4a;
+  --bg-hover: #3f4250;
+  --bg-overlay: rgba(255, 92, 57, 0.1);
+  --shadow: rgba(255, 92, 57, 0.08) 0px 3px 5px;
 }
 
 body {
