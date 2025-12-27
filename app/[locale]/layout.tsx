@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     description: "Welcome to My Portfolio",
     url: "https://ducle97.vercel.app/vi",
     siteName: "My Portfolio",
-    images: [{ url: "/personal.png" }],
+    images: [{ url: "https://ducle97.vercel.app/personal.png" }],
   },
 };
 
