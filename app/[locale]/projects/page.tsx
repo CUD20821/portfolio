@@ -4,9 +4,9 @@ import "./projects.css";
 import { getCategoryStats, getTechStackStats } from "@/app/utils/graph";
 import { PieChart } from "@/component/Charts";
 
-const categoryStats = await getCategoryStats();
-const techStackStats = await getTechStackStats();
-export default function Projects() {
+export default async function Projects() {
+  const categoryStats = await getCategoryStats();
+  const techStackStats = await getTechStackStats();
   return (
     <div>
       <div className="graphs">

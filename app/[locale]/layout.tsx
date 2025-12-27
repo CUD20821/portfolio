@@ -9,6 +9,8 @@ import { routing } from "@/i18n/routing";
 import { notFound } from "next/navigation";
 import viMessages from "@/messages/vi.json";
 import jaMessages from "@/messages/ja.json";
+import { Suspense } from "react";
+import Loading from "./loading";
 
 const notoSans = Noto_Sans({
   subsets: ["latin"],

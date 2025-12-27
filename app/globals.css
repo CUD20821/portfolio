@@ -48,6 +48,10 @@ body {
   font-size: 14px;
   color: var(--text-2);
   background-color: var(--bg-color);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: flex-start;
 }
 
 ul,
@@ -105,7 +109,7 @@ a {
   gap: 10px;
 }
 
-.hp-title{
+.hp-title {
   font-weight: bold;
   color: var(--main);
 }
