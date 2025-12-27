@@ -7,7 +7,7 @@ const dataProjects = [
     description:
       "Dự án bảo hiểm dành cho học sinh, dùng để đăng ký và quản lý hợp đồng bảo hiểm và đối tượng của sản phẩm trải dài từ cấp từ mẫu giáo đến đại học.",
     // long-description:" Dự án được triển khai trước năm học chính thức bên Nhật, được dùng đăng ký và quản lý bảo hiểm tổng hợp dành cho học sinh và trẻ em của Mitsui Sumitomo Kaijo.\n Dự án này đã được phát triển ở 1 bên khác, sau đó được bên mình tiếp nhận và phát triển tiếp.\n Dự án đã sang phase 3 và sẽ được triển khai hằng năm",
-    url: "/projects/insurance-school1",
+    url: "/projects/insurance-school",
   },
   {
     id: 2,
@@ -16,7 +16,7 @@ const dataProjects = [
     description:
       "Dự án bảo hiểm dành cho thiết bị điện tử(điện thoại, tablet, camera,...), dùng để đăng ký và quản lý hợp đồng bảo hiểm và yêu cầu thanh toán bảo hiểm khi gặp sự cố",
     // long-description: "",
-    url: "/projects/insurance-school2",
+    url: "/projects/insurance-influenza",
   },
   {
     id: 3,

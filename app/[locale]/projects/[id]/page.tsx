@@ -5,7 +5,7 @@ import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 
 export async function generateStaticParams() {
-  const ids = ["insurance-school1", "insurance-school2", "insurance-school3"];
+  const ids = ["insurance-school", "insurance-influenza", "insurance-school3"];
 
   return routing.locales.flatMap((locale) => ids.map((id) => ({ locale, id })));
 }

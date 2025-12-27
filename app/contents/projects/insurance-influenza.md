@@ -1,35 +1,38 @@
 ---
-id: "insurance-school2"
-titleVI: ""
-descriptionVI: ""
+id: "insurance-influenza"
+titleVI: "Bảo hiểm cảm cúm"
+descriptionVI: "Bảo hiểm ngắn hạn phục vụ cho mùa dịch cúm ở Nhật"
 titleJP: ""
 descriptionEN: ""
 link: ""
 tech: ["NuxtJS", "SCSS"]
-date: "2021-04-03"
+date: "2025-10-10"
 slug: ""
 image: ""
-category: "Insurance Tech2"
+category: "Insurance Tech"
 ---
 <---vi--->
 # I. Giới thiệu chung
+Bảo hiểm cho dịch cúm cho khách hàng Rakuten Shoutan, thuộc phân khúc sản phẩm [bảo hiểm ngắn hạn](https://small-short-ins.rakuten.co.jp/). Mục tiêu của dự án là giúp cho người dùng đăng ký và chọn ra được gói bảo hiểm phù hợp trong trong mùa cúm(thường bắt đầu từ tháng 12 ~ 3 năm sau)
 
+Dự án được phát triển tiếp nhờ có hiệu tốt từ dự án bảo hiểm sốc nhiệt trước đó.
 
 **Các thành phần chính của dự án:**
-- Trang đăng ký hợp đồng: Học sinh vào trang web của từng trường để tham khảo các loại hợp đồng mà mỗi nơi triển khai, từ đó chọn ra sản phẩm phù hợp và thực hiện thủ tục đăng ký qua form có sẵn
-- Trang mypage: Học sinh hoặc phụ huynh sẽ quản lý số lượng, tình trạng hợp đồng đã đăng ký. 
+- `Trang đăng ký hợp đồng`: Người dùng vào trang web để tham khảo các gói bảo hiểm phù hợp, hệ thống sẽ tự tính toán mức phí phù hợp cho từng người dùng, từ đó điền form chi tiết để người dùng có thể bắt đầu bảo hiểm 1 cách nhanh chóng.
+- `Trang mypage`: Người dùng sẽ quản lý số lượng, tình trạng hợp đồng đã đăng ký. Trong thời hạn bảo hiểm, người dùng có thể yêu cầu bên bảo hiểm thanh toán thông qua mypage.
 
 # II. Đặc trưng của dự án
 ## Bối cảnh
 
-1.&nbsp; Được bàn giao dự án từ một bên khác 
-- Yêu cầu **sự ổn định**
+1.&nbsp; Phát triển dựa vào một án đã có trong 1 thời gian ngắn(giữa tháng 10 ~ cuối tháng 11)
+- Yêu cầu **nắm bắt nghiệp vụ nhanh**
 
-2.&nbsp; Số lượng trường học cần xử lý lớn
-- Yêu cầu **sự mở rộng**
+2.&nbsp; Tài liệu được làm song song trong lúc phát triển
+- Yêu cầu **phối hợp chặt chẽ với team phát triển**
 
-3.&nbsp; Logic chung khá giống nhau nhưng từng trường có yêu cầu chi tiết khác nhau
-- Yêu cầu **sự linh hoạt nhưng nhất quán**
+3.&nbsp; Kiểm tra chất lượng song song giữa Nhật Bản và Việt Nam
+- Yêu cầu **báo cáo tiến độ cho team Nhật hằng ngày**
+
 
 ## Công nghệ
 
@@ -39,47 +42,33 @@ category: "Insurance Tech2"
 
 3.&nbsp; VueX(Store management)
 
-4.&nbsp; Golang(Echo)
-
-5.&nbsp; Miro(quản lý Detail Design)
+4.&nbsp; Miro(quản lý Detail Design)
 
 6.&nbsp; Backlog(Task management)
 
-7.&nbsp; GG Workspace(google sheet, drive)
+7.&nbsp; Github(PR management, Issue management)
 
-## Con người
+## Cách vận hành
 
-1.&nbsp; Team Nhật Bản gồm 3 người(1 dev, 2 PM) và team Việt Nam gồm 6 người(1 PM, 1 BrSE, 3 dev, 1 QC) phối hợp.
+1.&nbsp; Team Nhật Bản gồm 2 người(1 dev, 1 PM) và team Việt Nam gồm 5 người(1 PM, 1 BrSE, 2 dev, 1 QC) phối hợp.
 
-2.&nbsp; Mỗi tuần phải họp từ 1 ~ 2 lần, nếu có vấn đề cần giải quyết gấp sẽ gọi trực tiếp qua google meeting hoặc huddle slack để giải thích vấn đề và đưa ra hướng giải quyết.
+2.&nbsp; Vì dự án gấp nên bên Nhật yêu cầu cần phải có `daily report hằng ngày vào mỗi sáng`
 
-3.&nbsp; Cả team Nhật và Việt đều là người mới và lần đầu làm việc chung, nên việc nắm bắt dự án và trao đổi ban đầu để thống nhất vấn đề cần thời gian. Nhưng nhờ ý thức về mức độ quan trọng của dự án của từng thành viên ở cả 2 team, cả 2 chỉ cần 1 tháng đã bắt nhịp cách làm việc với nhau.
+3.&nbsp; Dự án quản lý bằng ticket ở `Discussion` của github và kết hợp với Slack để thảo luận và thông báo kịp thời
 
-4.&nbsp; Team Việt được đảm nhận phần set up **sản phẩm**(phần quan trọng nhất để dự án có thể chạy) lần đầu tiên, nên đã có sự lo lắng nhất định. Nhưng nhờ sự tìm tòi và bằng cách "thử và sai" trước khi dự án bắt đầu 1.5 ~ 2 tháng, team đã tự tin cân mọi thể loại trường học 😤.
-
-5.&nbsp; Team Nhật đã thể hiện mong muốn kết hợp lâu dài với bên Việt bằng 1 chuyến du hành qua Việt Nam khi dự án vừa chạy được... 0.5 tháng. Mục tiêu của team Nhật là chia sẻ know-how về lĩnh vực bảo hiểm, về cách set up sản phẩm sao cho đúng và trúng, và quan trọng nhất là kết nối giữa người - người với nhau(ở 1 thế giới AI first thì điều này rất quan trọng!!)
+5.&nbsp; Mặc dù phát triển dự án đã có trước đó, nhưng nghiệp vụ đặc thù của từng sản phầm ví dụ như về `phạm vi chọn tuổi`, `ngày bắt đầu hợp đồng`, etc khiến cho việc chỉnh sửa logic cần thời gian hơn dự kiến
 
 # III. Những điều đã đạt được
-1.&nbsp; Sự tin tưởng của phía Nhật Bản: 
-- Trực tiếp đảm nhận set up sản phẩm
-- 
 
-2.&nbsp; Tham gia nhiều hơn về mặt kỹ thuật: không phải trực tiếp viết code, nhưng tham gia nhiều hơn về quản lý tình hình thông qua Github và nhiều thứ khác
-- Trao đổi request, bug, etc trên **Discussions** của github
-- 
-- Sử dụng `bot github-action` được tích hợp trong repo dự án để điều tra bug, tìm hiểu tài liệu dự án
+1.&nbsp; Phối hợp với team phát triển để hiểu rõ nghiệp vụ
+- Nhờ team phát triển điều tra logic từ source code, kết hợp với trao đổi với bên Nhật để chốt lại hướng xử lý
 
-3.&nbsp; Cách tiếp cận dự án đã chạy lâu
-- Kết hợp giữa cách làm `thủ công(đọc tài liệu, sử dụng trực tiếp sản phẩm , tương tác trực tiếp qua slack)` để nắm tổng quát về dự án và logic business, đồng thời dùng `AI(tra repo, tra business)` để có thể nắm thông tin về logic của màn hình, validation của từng fields
-- 
+2.&nbsp; Cách quản lý ticket mới
+- Vì tính chất cần sự nhanh chóng và tiện lợi cho team phát triển(không cần switch qua nhiều ứng dụng) nên thay vì dùng backlog để quản lý yêu cầu từ phía Nhật như thông thường, dự án sử dụng chức năng `Discussion` của github 
 
-4.&nbsp; Sắp xếp công việc khi có nhiều sản phẩm cần xử lý
-- Phân chia tài liệu DD theo từng category riêng để dễ dàng nắm bắt nội dung cần thiết một cách có hệ thống
-- Tận dụng chức năng `Documents` của backlogs để list up đầu công việc và báo cáo theo format đơn giản theo khoảng thời gian: tuần này, tuần sau
-- Chủ động trao đổi với PM Việt Nam để nắm tình hình nội bộ, từ đó để làm cơ sở trao đổi và sắp xếp công việc với bên Nhật
-
-5.&nbsp; 
-
+3.&nbsp; Kinh nghiệm trong việc ưu tiên ship logic trước
+- Khác với quy trình thông thường(basic design -> detail design -> development -> team Việt test -> team Nhật test), team `confirm logic song song quá trình implement`(tức là bước detail design và development kết hợp) và ship(gửi PR cho team JP) ngay sau khi qua bước kiểm tra happy case từ dev + brse + tester
+- Cộng với việc kết hợp kiểm tra từ phía Nhật nên những mismatch về logic và UI được xử lý nhanh chóng -> Sau khi release staging không có feedback từ phía khách hàng
 
 <---ja--->
 ## I. 概要

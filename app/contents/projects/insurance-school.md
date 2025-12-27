@@ -1,10 +1,10 @@
 ---
-id: "insurance-school1"
+id: "insurance-school"
 titleVI: "Bảo hiểm trường học"
 descriptionVI: "Dự án bảo hiểm dành cho học sinh, dùng để đăng ký và quản lý hợp đồng bảo hiểm và đối tượng của sản phẩm trải dài từ cấp từ mẫu giáo đến đại học."
 titleJP: "学校・こども総合保険・・・学校に通う子供を持つ保護者が加入する保険"
 descriptionJP: "学校・こども総合保険・・・学校に通う子供を持つ保護者が加入する保険"
-link: "example.comn"
+link: 
 tech: ["VueJS"]
 date: "2025-07-01"
 slug: ""
@@ -51,7 +51,7 @@ Dự án được bên mình tiếp nhận vào giữa năm 2025 để đáp ứ
 
 7.&nbsp; GG Workspace(quản lý tài liệu bên Nhật và Việt)
 
-## Con người
+## Cách vận hành
 
 1.&nbsp; Team Nhật Bản gồm 3 người(1 dev, 2 PM) và team Việt Nam gồm 6 người(1 PM, 1 BrSE, 3 dev, 1 QC) phối hợp.
 
@@ -59,7 +59,7 @@ Dự án được bên mình tiếp nhận vào giữa năm 2025 để đáp ứ
 
 3.&nbsp; Cả team Nhật và Việt đều là người mới và lần đầu làm việc chung, nên việc nắm bắt dự án và trao đổi ban đầu để thống nhất vấn đề cần thời gian. Nhưng nhờ ý thức về mức độ quan trọng của dự án của từng thành viên ở cả 2 team, cả 2 chỉ cần 1 tháng đã bắt nhịp cách làm việc với nhau.
 
-4.&nbsp; Team Việt được đảm nhận phần set up ```sản phẩm```(phần quan trọng nhất để dự án có thể chạy) lần đầu tiên, nên đã có sự lo lắng nhất định. Nhưng nhờ sự tìm tòi và bằng cách "thử và sai" trước khi dự án bắt đầu 1.5 ~ 2 tháng, team đã tự tin cân mọi thể loại trường học.
+4.&nbsp; Team Việt được đảm nhận phần set up `sản phẩm`(phần quan trọng nhất để dự án có thể chạy) lần đầu tiên, nên đã có sự lo lắng nhất định. Nhưng nhờ sự tìm tòi và bằng cách "thử và sai" trước khi dự án bắt đầu 1.5 ~ 2 tháng, team đã tự tin cân mọi thể loại trường học.
 
 5.&nbsp; Team Nhật đã thể hiện mong muốn kết hợp lâu dài với bên Việt bằng 1 chuyến du hành qua Việt Nam khi dự án vừa chạy được... 0.5 tháng. Mục tiêu của team Nhật là chia sẻ know-how về lĩnh vực bảo hiểm, về cách set up sản phẩm sao cho đúng và trúng, và quan trọng nhất là kết nối giữa người - người với nhau(ở 1 thế giới AI first thì điều này rất quan trọng!!)
 

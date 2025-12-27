@@ -11,6 +11,7 @@ import viMessages from "@/messages/vi.json";
 import jaMessages from "@/messages/ja.json";
 import { Suspense } from "react";
 import Loading from "./loading";
+import Head from "next/head";
 
 const notoSans = Noto_Sans({
   subsets: ["latin"],
@@ -19,8 +20,23 @@ const notoSans = Noto_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Duc Le",
-  description: "Duc Le app",
+  metadataBase: new URL("https://ducle97.vercel.app/vi"),
+  title: { default: "Portfolio", template: "%s | My Site" },
+  description: "Welcome to My Portfolio",
+  alternates: {
+    canonical: "https://ducle97.vercel.app/",
+    languages: {
+      "ja-JP": "https://ducle97.vercel.app/ja",
+      "vi-VN": "https://ducle97.vercel.app/vi",
+    },
+  },
+  openGraph: {
+    title: "My Portfolio",
+    description: "Welcome to My Portfolio",
+    url: "https://ducle97.vercel.app/vi",
+    siteName: "My Portfolio",
+    images: [{ url: "/personal.png" }],
+  },
 };
 
 export function generateStaticParams() {
