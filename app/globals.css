@@ -16,6 +16,12 @@
   --chart-tertiary: #ff6b4a;
   --chart-background: #e4e4e7;
   --chart-accent: #ff4520;
+  --bg-gradient: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #fafafa 40%,
+    rgba(255, 92, 57, 0.04) 100%
+  );
 }
 
 [data-theme="dark"] {
@@ -31,6 +37,12 @@
   --bg-hover: #3f4250;
   --bg-overlay: rgba(255, 92, 57, 0.1);
   --shadow: rgba(255, 92, 57, 0.08) 0px 3px 5px;
+  --bg-gradient: linear-gradient(
+    180deg,
+    #000000 0%,
+    #2a2d3a 60%,
+    rgba(255, 92, 57, 0.12) 100%
+  );
 }
 
 [data-theme="dark"] .highlight {
@@ -148,7 +160,7 @@ a {
   margin: 0 auto;
 }
 
-.intro{
+.greeting {
   position: fixed;
   inset: 0;
   background-color: black;
@@ -156,14 +168,16 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: intro 2s linear forwards;
+  animation: greeting 1.5s linear forwards;
+  pointer-events: none;
 }
 
-@keyframes intro {
+@keyframes greeting {
   from {
     opacity: 1;
   }
   to {
     opacity: 0;
+    visibility: hidden;
   }
 }

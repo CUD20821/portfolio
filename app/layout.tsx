@@ -8,9 +8,9 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body>
-        <div className="intro">
-          <Image src="/meo.gif" alt="meo" layout="fill" />
-        </div>
+        {/* <div className="greeting">
+          <Image src="/greeting.gif" alt="meo" layout="fill" />
+        </div> */}
         {children}
       </body>
     </html>
