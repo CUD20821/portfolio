@@ -5,7 +5,7 @@ descriptionVI: "Dự án bảo hiểm dành cho học sinh, dùng để đăng k
 titleJP: "学校・こども総合保険・・・学校に通う子供を持つ保護者が加入する保険"
 descriptionJP: "学校・こども総合保険・・・学校に通う子供を持つ保護者が加入する保険"
 link: ""
-tech: ["VueJS"]
+tech: ["NuxtJS", "GoLang"]
 date: "2025-07-01"
 slug: ""
 image: "/projects/insurance-school.png"
@@ -40,17 +40,13 @@ Dự án được bên mình tiếp nhận vào giữa năm 2025 để đáp ứ
 
 1.&nbsp; Nuxtjs(Typescript)
 
-2.&nbsp; SCSS
+2.&nbsp; Golang(Echo)
 
-3.&nbsp; VueX(Store management)
+3.&nbsp; Miro(quản lý Detail Design)
 
-4.&nbsp; Golang(Echo)
+4.&nbsp; Backlog(Task management)
 
-5.&nbsp; Miro(quản lý Detail Design)
-
-6.&nbsp; Backlog(Task management)
-
-7.&nbsp; GG Workspace(quản lý tài liệu bên Nhật và Việt)
+5.&nbsp; GG Workspace(quản lý tài liệu bên Nhật và Việt)
 
 ## Cách vận hành
 

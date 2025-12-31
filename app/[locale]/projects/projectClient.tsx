@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useState } from "react";
 import Project from "@/component/Project";
 import { PieChart } from "@/component/Charts";
+import Image from "next/image";
 // import { dataProjects } from "@/app/constants";
 import { Stats } from "@/app/utils/graph";
 import "./projects.css";
@@ -17,13 +18,27 @@ export default function ProjectClient({
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   datas: any[];
 }) {
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(
-    () => {
-      // window là biến khi js chạy ở client, nên cần check để không crash app
-      if (typeof window === "undefined") return null;
-      return sessionStorage.getItem("selectedCategory");
+  // Old
+  // const [selectedCategory, setSelectedCategory] = useState<string | null>(
+  //   () => {
+  //     // window là biến khi js chạy ở client, nên cần check để không crash app
+  //     if (typeof window === "undefined") return null;
+  //     return sessionStorage.getItem("selectedCategory");
+  //   }
+  // );
+
+  // New
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const [mounted, setMounted] = useState(false);
+
+  // Khi component mount trên client, đọc sessionStorage và bật mounted
+  useEffect(() => {
+    setMounted(true);
+    if (typeof window !== "undefined") {
+      const stored = sessionStorage.getItem("selectedCategory");
+      if (stored) setSelectedCategory(stored);
     }
-  );
+  }, []);
 
   useEffect(() => {
     if (selectedCategory) {
@@ -32,6 +47,15 @@ export default function ProjectClient({
       sessionStorage.removeItem("selectedCategory");
     }
   }, [selectedCategory]);
+
+  useEffect(() => {
+    if (!mounted) return;
+    if (selectedCategory) {
+      sessionStorage.setItem("selectedCategory", selectedCategory);
+    } else {
+      sessionStorage.removeItem("selectedCategory");
+    }
+  }, [selectedCategory, mounted]);
 
   // // eslint-disable-next-line react-hooks/preserve-manual-memoization
   // const filteredProjects = useMemo(() => {
@@ -75,16 +99,24 @@ export default function ProjectClient({
           onSelectCategory={setSelectedCategory}
         />
       </div>
-
-      {selectedCategory && (
-        <div>
-          <p>
-            Filtering by category:
-            <strong> {selectedCategory}</strong>
-          </p>
-          <button onClick={() => setSelectedCategory(null)}>Reset</button>
-        </div>
-      )}
+      <div className="filter-wrapper">
+        {/* Giữ wrapper DOM cố định để tránh thay đổi thứ tự node */}
+        {mounted && selectedCategory && (
+          <div>
+            <p>
+              Filtering by category:
+              <strong> {selectedCategory}</strong>
+            </p>
+            <Image
+              src={"/reset.png"}
+              alt="reset-btn"
+              width={32}
+              height={32}
+              onClick={() => setSelectedCategory(null)}
+            />
+          </div>
+        )}
+      </div>
 
       <div className="projects">
         {filteredProjects.map((item) => (

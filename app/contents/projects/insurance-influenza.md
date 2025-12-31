@@ -5,7 +5,7 @@ descriptionVI: "Bảo hiểm ngắn hạn phục vụ cho mùa dịch cúm ở N
 titleJP: ""
 descriptionEN: ""
 link: ""
-tech: ["NuxtJS", "SCSS"]
+tech: ["NuxtJS", "GoLang"]
 date: "2025-10-10"
 slug: ""
 image: "/projects/insurance-influenza.png"
@@ -39,15 +39,13 @@ Dự án được phát triển tiếp nhờ có hiệu tốt từ dự án bả
 
 1.&nbsp; Nuxtjs(Typescript)
 
-2.&nbsp; SCSS
+2.&nbsp; Golang(Echo)
 
-3.&nbsp; VueX(Store management)
+3.&nbsp; Miro(quản lý Detail Design)
 
-4.&nbsp; Miro(quản lý Detail Design)
+4.&nbsp; Backlog(Task management)
 
-6.&nbsp; Backlog(Task management)
-
-7.&nbsp; Github(PR management, Issue management)
+5.&nbsp; GG Workspace(quản lý tài liệu bên Nhật và Việt)
 
 ## Cách vận hành
 

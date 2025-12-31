@@ -1,12 +1,12 @@
 ---
 id: "insurance-device"
 titleVI: "Bảo hiểm thiết bị"
-descriptionVI: "Bảo hiểm khi thiết bị điện tử bị hư hỏng, bao gồm các thiết bị tử thông dụng như điện thoại, máy tính bảng, tivi, vv"
+descriptionVI: "Bảo hiểm khi thiết bị điện tử bị hư hỏng, bao gồm các thiết bị tử thông dụng như điện thoại, máy tính bảng, tivi,vv"
 titleJP: ""
 descriptionEN: ""
 link: ""
-tech: ["NuxtJS", "SCSS"]
-date: "2021-04-03"
+tech: ["NuxtJS", "GoLang"]
+date: "2024-12-01"
 slug: ""
 image: "/projects/insurance-device.png"
 category: "Insurance Tech"
@@ -14,80 +14,66 @@ url: "/projects/insurance-device"
 ---
 
 <---vi--->
+
 # I. Giới thiệu chung
-Bảo hiểm trường học là tên chung của một dự án lớn, trong đó được chia thành nhiều phần nhỏ hơn tương ứng với mỗi ngôi trường để phù hợp cho nhu cầu của từng trường.
 
-Dự án được bắt đầu phát triển từ 10/2023, triển khai đầu tiên dành cho học sinh mầm non(園児). Sau đó, được mở rộng cho cấp 2 và cấp 3(中高連) các tháng tiếp theo. Dự án được release lần đầu tiên vào đầu năm 2024. Dự án thu hút được sự quan tâm và được triển khai đến cấp đại học(大学・大学院). 
+Bảo hiểm thiết bị là loại bảo hiểm ngắn hạn, giúp người dùng giảm rủi ro chi phí sửa khi smartphone hoặc thiết bị kỹ thuật số bị hư hỏng, rơi vỡ, dính nước, lỗi, hoặc bị trộm.vv.
 
-Dự án được bên mình tiếp nhận vào giữa năm 2025 để đáp ứng được số lượng trường ngày càng mở rộng.
+Dự án được bắt đầu phát triển từ tháng 12/2025, được hoàn thành trong vòng **2.5 tháng** và chính thức release từ tháng **5/2025**.
 
 **Các thành phần chính của dự án:**
-- `Trang đăng ký hợp đồng`: Học sinh vào trang web của từng trường để tham khảo các loại hợp đồng mà mỗi nơi triển khai, từ đó chọn ra sản phẩm phù hợp và thực hiện thủ tục đăng ký qua form có sẵn
-- `Trang mypage`: Học sinh hoặc phụ huynh sẽ quản lý số lượng, tình trạng hợp đồng đã đăng ký. 
+
+- `Trang landing page`: Giúp người dung hình dung về lợi ích bảo hiểm này mang lại.
+- `Trang đăng ký hợp đồng`: Người thực hiện các bước đăng ký để có thể bắt đầu hợp đồng bảo hiểm.
+- `Trang mypage`: Người dùng quản lý thông tin và trạng thái hợp đồng, đồng thời có thể yêu cầu bồi thường khi có sự cố xảy ra.
 
 # II. Đặc trưng của dự án
+
 ## Bối cảnh
 
-1.&nbsp; Được bàn giao dự án từ một bên khác 
-- Yêu cầu **sự ổn định**
+1.&nbsp; Dự án đầu tiên được phía Nhật giao làm đủ 3 thành phần chínnh của domain Insurannce tech
 
-2.&nbsp; Số lượng trường học cần xử lý lớn
-- Yêu cầu **sự mở rộng**
+- Yêu cầu **sự tuân theo quy tắc đặc thù của cụm dự án**
 
-3.&nbsp; Logic chung khá giống nhau nhưng từng trường có yêu cầu chi tiết khác nhau
-- Yêu cầu **sự linh hoạt nhưng nhất quán**
+2.&nbsp; Dự án tiền đề để mở rộng thêm các dự án trong lĩnh vực Insurance tech
+
+- Yêu cầu **phối hợp và giao tiếp hiệu quả**
 
 ## Công nghệ
 
 1.&nbsp; Nuxtjs(Typescript)
 
-2.&nbsp; SCSS
+2.&nbsp; Golang(Echo)
 
-3.&nbsp; VueX(Store management)
+3.&nbsp; Miro(quản lý Detail Design)
 
-4.&nbsp; Golang(Echo)
+4.&nbsp; Backlog(Task management)
 
-5.&nbsp; Miro(quản lý Detail Design)
-
-6.&nbsp; Backlog(Task management)
-
-7.&nbsp; GG Workspace(quản lý tài liệu bên Nhật và Việt)
+5.&nbsp; GG Workspace(quản lý tài liệu bên Nhật và Việt)
 
 ## Cách vận hành
 
 1.&nbsp; Team Nhật Bản gồm 3 người(1 dev, 2 PM) và team Việt Nam gồm 6 người(1 PM, 1 BrSE, 3 dev, 1 QC) phối hợp.
 
-2.&nbsp; Mỗi tuần phải họp từ 1 ~ 2 lần, nếu có vấn đề cần giải quyết gấp sẽ gọi trực tiếp qua google meeting hoặc huddle slack để giải thích vấn đề và đưa ra hướng giải quyết.
+2.&nbsp; Mỗi tuần phải họp từ `1 ~ 2 lần`, nếu có vấn đề cần giải quyết gấp sẽ gọi trực tiếp qua google meeting hoặc huddle slack để giải thích vấn đề và đưa ra hướng giải quyết.
 
-3.&nbsp; Cả team Nhật và Việt đều là người mới và lần đầu làm việc chung, nên việc nắm bắt dự án và trao đổi ban đầu để thống nhất vấn đề cần thời gian. Nhưng nhờ ý thức về mức độ quan trọng của dự án của từng thành viên ở cả 2 team, cả 2 chỉ cần 1 tháng đã bắt nhịp cách làm việc với nhau.
+3.&nbsp; Vì là dự án đầu tiên được làm đủ cả 3 thành phần, phía Nhật yêu cầu cao trong việc `tuân thủ cách triển khai code và review chéo`. Mỗi PR đều cần lead phía Việt Nam review trước khi thông báo cho Nhật Bản.
 
-4.&nbsp; Team Việt được đảm nhận phần set up `sản phẩm`(phần quan trọng nhất để dự án có thể chạy) lần đầu tiên, nên đã có sự lo lắng nhất định. Nhưng nhờ sự tìm tòi và bằng cách "thử và sai" trước khi dự án bắt đầu 1.5 ~ 2 tháng, team đã tự tin cân mọi thể loại trường học.
+4.&nbsp; Phong cách code của Việt Nam(`ưu tiên triển khai logic core trước, viết unit test sau khi đã chạy được 2 tuần ~ 1 tháng`) và Nhật(`viết unit test từ đầu, mỗi PR đều phải kèm logic và unit test tương ứng`) nên đã có những bất đồng ý kiến ban đầu, nhưng thông qua các buổi meeting đã hoà hợp được quan điểm 2 bên.
 
-5.&nbsp; Team Nhật đã thể hiện mong muốn kết hợp lâu dài với bên Việt bằng 1 chuyến du hành qua Việt Nam khi dự án vừa chạy được... 0.5 tháng. Mục tiêu của team Nhật là chia sẻ know-how về lĩnh vực bảo hiểm, về cách set up sản phẩm sao cho đúng và trúng, và quan trọng nhất là kết nối giữa người - người với nhau(ở 1 thế giới AI first thì điều này rất quan trọng!!)
+5.&nbsp; Dự án theo mô hình [SaaS chuyên về lĩnh vực bảo hiểm](https://finatext.com/domain/insurtech/inspire/) - tức là sẽ có thành phần được xây dựng sẵn, từ đó sẽ customize theo nhu cầu khách hàng. Việc `lần đầu được đi sâu vào mô hình` + `ứng dụng được những thứ sẵn có` + `yêu cầu cao về chất lượng và thời gian` đã có những sai sót không tránh khỏi, nhưng nhờ buổi retrospective sau khi dự án release đã giúp 2 bên hiểu nhau hơn
 
 # III. Những điều đã đạt được
-1.&nbsp; Sự tin tưởng của phía Nhật Bản
-- Trực tiếp đảm nhận set up sản phẩm
-- Đề xuất tối ưu của team được xem xét và ứng dụng nhiều hơn
-- Sau khi tiếp nhận, team đã release thành công 3 đợt mà hầu như không có bug mà phía Nhật trả về(vì vấn đề đã giải quyết triệt để trong lúc phát triển) => team Nhật tiếp tục bàn giao cho team để phát triển cho những năm tiếp theo
 
-2.&nbsp; Tham gia nhiều hơn về mặt kỹ thuật: không phải trực tiếp viết code, nhưng tham gia nhiều hơn về quản lý tình hình thông qua Github và nhiều thứ khác
-- Trao đổi request, bug, etc trên `Discussions` của github
-- Set up sản phẩm bảo hiểm(`21/21 sản phẩm`, trong đó có những sản phẩm có số lượng câu hỏi lên đến 50)
-- Sử dụng `bot github-action` được tích hợp trong repo dự án để điều tra bug, tìm hiểu tài liệu dự án
+1.&nbsp; Trở thành tiền đề để nhận được các dự án thuộc cùng business sau này
 
-3.&nbsp; Cách tiếp cận dự án đã được 1 bên khác phát triển trước đó
-- Kết hợp giữa cách làm `thủ công(đọc tài liệu, sử dụng trực tiếp sản phẩm , tương tác trực tiếp qua slack) - 80%` để nắm tổng quát về dự án và logic business, đồng thời dùng `AI(tra repo, tra business) - 20%` để có thể nắm thông tin về logic của màn hình, validation của từng fields
-- Chủ động sắp xếp các cuộc `meeting ngắn tầm 15~30 phút` để trao đổi nhanh về những vấn đề chưa hiểu
+- Dự án hoàn thành trước schedule Nhật đưa ra `trước 2 tuần` đã chứng minh được năng lực của team
+- Nhờ sự phối hợp hiệu quả đã giúp team Nhật `mong muốn thành lập team Labo`
 
-4.&nbsp; Sắp xếp công việc khi có nhiều sản phẩm cần xử lý
-- Phân chia tài liệu DD theo từng category riêng để dễ dàng nắm bắt nội dung cần thiết một cách có hệ thống
-- Tận dụng chức năng `Documents` của backlogs để list up đầu công việc và báo cáo theo format đơn giản theo khoảng thời gian: tuần này, tuần sau
-- Chủ động trao đổi ngắn với PM Việt Nam(tầm 5~10 phút) để nắm tình hình nội bộ trước ngày họp 1 ngày, từ đó để làm cơ sở trao đổi và sắp xếp công việc với bên Nhật
+2.&nbsp; Hiểu rõ hơn về mô hình SaaS bảo hiểm
 
-5.&nbsp; Hiểu được sự cởi mở ban đầu sẽ xoá được bất đồng sau này
-- Việc phía Nhật chủ động qua Việt Nam để chia sẻ know-how, khó khăn của dự án trước đó, quan điểm của 2 bên từ việc review code đến cách test đã giúp xoá đi điểm mập mờ 2 bên
-- Khi làm việc thẳng thắn trao đổi những vấn đề không rõ để tránh sai xót về logic, về cách code, vv sau này, từ đó xây dựng được sự tin tưởng
+- Hiểu pros & cons của thành phần và chức năng đã có
+- Hiểu mô hình BFF hoạt động, từ đó truy vết hiệu quả
 
 <---ja--->
 JA
