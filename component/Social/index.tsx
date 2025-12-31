@@ -6,7 +6,7 @@ const Social = ({ img, url }: { img: string; url: string }) => {
   return (
     <div className="contact-icon">
       <Link href={url} className="contact-ctn">
-        <Image src={img} alt={img} width={48} height={48}></Image>
+        <Image src={img} alt={img} width={32} height={32}></Image>
       </Link>
     </div>
   );

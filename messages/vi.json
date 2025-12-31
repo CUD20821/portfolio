@@ -1,16 +1,14 @@
 {
   "HomePage": {
-    "greeting": "Xin chào, tôi tên là Đức",
-    "intro": "Tôi hiện đang làm việc ở vị trí",
+    "greeting": "Xin chào 👋",
+    "name": "Đức",
+    "intro1": "Tôi là",
     "position": "BrSE - Bridge Software Engineer",
-    "experience": "Tôi đã có {yoe}+ năm kinh nghiệm trong lĩnh vực offshore software development.",
-    "mainField": "Mảng chủ yếu tôi tham gia là",
-    "webDevelopment": "Website Development",
-    "businessDomain": "và business domain chủ yếu là",
-    "insurance": "Bảo hiểm",
-    "brseRole": "Với vai trò BrSE trong dự án, không chỉ mang nhiệm vụ truyền đạt thông tin đúng và đủ, tôi còn phải là người hỗ trợ trong việc quản lý tiến độ công việc, đưa ra ý kiến về những vấn đề nhân sự trong team. Nói chung là làm thợ đụng(ngoài code)",
-    "background": "Tôi KHÔNG phải xuất phát từ ngành CNTT, nhưng nhờ một vài sự tình cờ, tôi được tham gia vào một công ty IT outsourc cho thị trường Nhật khi mới về Việt Nam, kể từ đó sự tò mò và hứng thú khi làm mảng Web Development luôn được duy trì đến hiện tại.",
-    "purpose": "Vì luôn tò mò về công nghệ(vì không biết gì cả), nên tôi làm ra trang này để giới thiệu bản thân nhưng cũng là nơi để ghi lại chặng đường của tôi trong ngành này.",
+    "experience": "{yoe}+ năm kinh nghiệm",
+    "intro2": "Mảng chủ yếu tôi tham gia là",
+    "mainField": "Offshore Software Development",
+    "intro3": "và business domain chủ yếu là",
+    "businessDomain": "Bảo hiểm",
     "experienceTitle": "Experience",
     "projectsTitle": "Projects",
     "skillsTitle": "Skills",
@@ -30,5 +28,11 @@
   "NotFound": {
     "title": "Trang không tìm thấy",
     "description": "Xin lỗi, trang bạn đang tìm kiếm không tồn tại."
+  },
+  "About": {
+    "background": "Tôi KHÔNG phải xuất phát từ ngành CNTT, nhưng nhờ một vài sự tình cờ, tôi được tham gia vào một công ty IT outsourc cho thị trường Nhật khi mới về Việt Nam, kể từ đó sự tò mò và hứng thú khi làm mảng Web Development luôn được duy trì đến hiện tại.",
+    "purpose": "Vì luôn tò mò về công nghệ(vì không biết gì cả), nên tôi làm ra trang này để giới thiệu bản thân nhưng cũng là nơi để ghi lại chặng đường của tôi trong ngành này.",
+    "brseRole": "Với vai trò BrSE trong dự án, không chỉ mang nhiệm vụ truyền đạt thông tin đúng và đủ, tôi còn phải là người hỗ trợ trong việc quản lý tiến độ công việc, đưa ra ý kiến về những vấn đề nhân sự trong team. Nói chung là làm thợ đụng(ngoài code)",
+    "webDevelopment": "Website Development"
   }
 }

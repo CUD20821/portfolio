@@ -28,22 +28,24 @@ export default function HomePageClient({ data }: { data: any[] }) {
 
   return (
     <div>
-      <h1>{t("greeting")}</h1>
-      <div>
-        {t("intro")} <span className="highlight">{t("position")}</span>.{" "}
-        {t("experience", { yoe })}
-        <br />
-        <span className="space-between-graph"></span>
-        {t("mainField")}{" "}
-        <span className="highlight">{t("webDevelopment")}</span>{" "}
-        {t("businessDomain")}{" "}
-        <span className="highlight">{t("insurance")}</span>
-        <br />
-        {t("brseRole")}
-        <span className="space-between-graph"></span>
-        {t("background")}
-        <span className="space-between-graph"></span>
-        {t("purpose")}
+      <div className="test">
+        <h2 className="greeting">{t("greeting")}</h2>
+        <h1 className="intro">
+          {t("intro1")} <span className="highlight">{t("name")}</span>
+        </h1>
+        <div>
+          {t("experience", { yoe })}{" "}
+          <span className="highlight">{t("position")}</span>
+          <br />
+          <br />
+          {t("intro2")} <span className="highlight">{t("mainField")}</span>{" "}
+          {t("intro3")} <span className="highlight">{t("businessDomain")}</span>
+        </div>
+        <div className="contact-items">
+          {dataContact.map((item) => (
+            <Social key={item.id} img={item.img} url={item.url} />
+          ))}
+        </div>
       </div>
       <div className="content-parent">
         <div className="content-col-1">
@@ -64,20 +66,6 @@ export default function HomePageClient({ data }: { data: any[] }) {
                   )}
                   place={item.place}
                   description={item.description}
-                />
-              ))}
-            </div>
-          </div>
-          <div className="box">
-            <div className="hp-title">
-              <span>{t("contactTitle")}</span>
-            </div>
-            <div className="contact-items">
-              {dataContact.map((item) => (
-                <Social 
-                key={item.id}
-                img={item.img}
-                url={item.url}
                 />
               ))}
             </div>
