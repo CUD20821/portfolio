@@ -6,15 +6,22 @@ import Image from "next/image";
 import ThemeSwitcher from "../ThemeSwitcher";
 import LanguageSwitcher from "../LanguageSwitcher";
 
-const dataMenu = [
+// const dataMenu = [
+//   {
+//     id: "projects",
+//     name: "Projects",
+//     path: "/projects",
+//   },
+// ];
+
+const Header: React.FC = () => {
+  const dataMenu = [
   {
     id: "projects",
     name: "Projects",
     path: "/projects",
   },
 ];
-
-const Header: React.FC = () => {
   const pathname = usePathname(); // 2. Get current path
 
   const [isVisible, setIsVisible] = useState(true);
