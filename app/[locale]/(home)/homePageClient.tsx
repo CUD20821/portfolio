@@ -20,7 +20,6 @@ export default function HomePageClient({ data }: { data: any[] }) {
   const today = new Date();
   // const data = await getListMarkdownData();
   const { locale } = useParams();
-  console.log(typeof locale);
   const messages = locale === "vi" ? viMessages : jaMessages;
   const experiences = messages.Experience;
 
@@ -87,8 +86,8 @@ export default function HomePageClient({ data }: { data: any[] }) {
                   <Project
                     key={item.id}
                     image={item.image}
-                    title={item.titleVI}
-                    description={item.descriptionVI}
+                    title={locale === "vi" ? item.titleVI : item.titleJP}
+                    description={locale === "vi" ? item.descriptionVI : item.descriptionJP}
                     url={item.url}
                   />
                 ))}
@@ -96,7 +95,7 @@ export default function HomePageClient({ data }: { data: any[] }) {
             </div>
             <div>
               <Link href={"/projects"} className="seemore">
-                See All Projects
+                {tHomepage("seeAllProjects")}
               </Link>
             </div>
           </div>

@@ -7,6 +7,7 @@ import Image from "next/image";
 // import { dataProjects } from "@/app/constants";
 import { Stats } from "@/app/utils/graph";
 import "./projects.css";
+import { useParams } from "next/navigation";
 
 export default function ProjectClient({
   categoryStats,
@@ -27,6 +28,7 @@ export default function ProjectClient({
   //   }
   // );
 
+  const { locale } = useParams();
   // New
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [mounted, setMounted] = useState(false);
@@ -89,12 +91,12 @@ export default function ProjectClient({
     <div>
       <div className="graphs">
         <PieChart
-          graphTitle="Business Domain"
+          graphTitle={locale === "vi" ? "Business Domain" : "ビジネス割合"}
           stats={categoryStats}
           onSelectCategory={setSelectedCategory}
         />
         <PieChart
-          graphTitle="Tech stack"
+          graphTitle={locale === "vi" ? "Tech stack" : "技術割合"}
           stats={techStackStats}
           onSelectCategory={setSelectedCategory}
         />
@@ -123,9 +125,9 @@ export default function ProjectClient({
           <Project
             key={item.id}
             image={item.image}
-            title={item.titleVI}
+            title={locale === "vi" ? item.titleVI : item.titleJP}
+            description={locale === "vi" ? item.descriptionVI : item.descriptionJP}
             url={item.url}
-            description={item.descriptionVI}
             type={"main"}
           />
         ))}
