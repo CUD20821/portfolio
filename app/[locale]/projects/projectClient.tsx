@@ -115,6 +115,7 @@ export default function ProjectClient({
               width={32}
               height={32}
               onClick={() => setSelectedCategory(null)}
+              className="reset-btn"
             />
           </div>
         )}

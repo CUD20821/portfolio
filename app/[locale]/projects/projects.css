@@ -5,8 +5,20 @@
   margin-top: 24px;
 }
 
-.graphs{
+.graphs {
   display: flex;
   gap: 12px;
   justify-content: space-evenly;
+}
+
+.reset-btn {
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: var(--shadow);
+}
+
+.reset-btn:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12), 0 10px 15px var(--main);
 }
