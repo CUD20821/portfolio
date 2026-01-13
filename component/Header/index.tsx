@@ -44,13 +44,14 @@ const Header: React.FC = () => {
     >
       <div className="styles_ctnLeftHeader">
         <Link href={"/"} className="logo-ctn">
-          <Image
+          {/* <Image
             src={"/me.jpeg"}
             className="logo"
             alt="logo"
             width={40}
             height={40}
-          />
+          /> */}
+          <span>Lê Trung Đức</span>
         </Link>
       </div>
 

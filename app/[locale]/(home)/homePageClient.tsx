@@ -13,6 +13,7 @@ import Social from "@/component/Social";
 import viMessages from "@/messages/vi.json";
 import jaMessages from "@/messages/ja.json";
 import { useParams } from "next/navigation";
+import Image from "next/image";
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export default function HomePageClient({ data }: { data: any[] }) {
   const tHomepage = useTranslations("HomePage");
@@ -34,26 +35,52 @@ export default function HomePageClient({ data }: { data: any[] }) {
 
   return (
     <div>
-        <h2 className="greeting">{tHomepage("greeting")}</h2>
-        <h1 className="intro">
-          {tHomepage("intro1")}{" "}
-          <span className="highlight">{tHomepage("name")}</span>
-        </h1>
-        <div>
-          {tHomepage("experience", { yoe })}{" "}
-          <span className="highlight">{tHomepage("position")}</span>
-          <br />
-          <br />
-          {tHomepage("intro2")}{" "}
-          <span className="highlight">{tHomepage("mainField")}</span>{" "}
-          {tHomepage("intro3")}{" "}
-          <span className="highlight">{tHomepage("businessDomain")}</span>
+      <div className="grid lg:grid-cols-[600px_1fr] gap-12 lg:gap-10 items-center">
+        <div className="w-full">
+          <h2 className="greeting">{tHomepage("greeting")}</h2>
+          <h1 className="intro">
+            {tHomepage("intro1")}{" "}
+            <span className="highlight">{tHomepage("name")}</span>
+          </h1>
+          <div>
+            {tHomepage("experience", { yoe })}{" "}
+            <span className="highlight">{tHomepage("position")}</span>
+            <br />
+            <br />
+            {tHomepage("intro2")}{" "}
+            <span className="highlight">{tHomepage("mainField")}</span>{" "}
+            {tHomepage("intro3")}{" "}
+            <span className="highlight">{tHomepage("businessDomain")}</span>
+          </div>
+          <a href={"/cv.pdf"} target="_blank" rel="noopener noreferrer">
+            <div>
+              <div className="flex items-center justify-center gap-2 bg-white text-black w-40 h-12 mt-6 rounded-2xl">
+                <Image
+                  src={"/download.png"}
+                  alt="resume"
+                  width={20}
+                  height={20}
+                />
+                <span>My resume</span>
+              </div>
+            </div>
+          </a>
+          <div className="flex gap-6 items-center mt-6">
+            {dataContact.map((item) => (
+              <Social key={item.id} img={item.img} url={item.url} />
+            ))}
+          </div>
         </div>
-        <div className="contact-items">
-          {dataContact.map((item) => (
-            <Social key={item.id} img={item.img} url={item.url} />
-          ))}
+        <div className="flex justify-center relative">
+          <Image
+            src={"/me.jpeg"}
+            alt="me"
+            width={300}
+            height={300}
+            className="rounded-full"
+          />
         </div>
+      </div>
       <div className="content-parent">
         <div className="content-col-1">
           <div className="box">
@@ -67,7 +94,11 @@ export default function HomePageClient({ data }: { data: any[] }) {
                   image={ex.image}
                   position={ex.position}
                   company={ex.company}
-                  duration={formatExperienceDuration(ex.startDate, ex.endDate, locale)}
+                  duration={formatExperienceDuration(
+                    ex.startDate,
+                    ex.endDate,
+                    locale
+                  )}
                   place={ex.place}
                   description={ex.description}
                 />
@@ -87,7 +118,9 @@ export default function HomePageClient({ data }: { data: any[] }) {
                     key={item.id}
                     image={item.image}
                     title={locale === "vi" ? item.titleVI : item.titleJP}
-                    description={locale === "vi" ? item.descriptionVI : item.descriptionJP}
+                    description={
+                      locale === "vi" ? item.descriptionVI : item.descriptionJP
+                    }
                     url={item.url}
                   />
                 ))}
