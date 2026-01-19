@@ -10,8 +10,7 @@ interface ProjectProps {
   type?: string;
 }
 
-function 
-Project(props: ProjectProps) {
+function Project(props: ProjectProps) {
   const { title, image, description, url, type } = props;
 
   return (
@@ -19,8 +18,8 @@ Project(props: ProjectProps) {
       {type === "main" ? (
         <Link href={url} className="card">
           <div className="card-header">
-            <div>
-              <Image src={image} alt="logo" width={42} height={42} />
+            <div className="relative size-12">
+              <Image src={image} alt="logo" fill sizes="48px" className="object-cover"/>
             </div>
             <div>
               <span className="project-title">{title}</span>
@@ -34,7 +33,9 @@ Project(props: ProjectProps) {
         </Link>
       ) : (
         <Link href={url} className="card sub">
-          <Image src={image} alt="logo" width={42} height={42} />
+          <div className="relative size-12">
+            <Image src={image} alt="logo" fill sizes="48px" className="object-cover"/>
+          </div>
           <div className="content">
             <p className="project-title">{title}</p>
             <p className="sub-project-description">{description}</p>

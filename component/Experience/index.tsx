@@ -15,11 +15,13 @@ interface ExperienceProps {
 function Experience(props: ExperienceProps) {
   const { image, position, company, duration, place, description } = props;
   const [show, setShow] = useState(false);
-  const toggleShow = () => setShow(prev => !prev);
+  const toggleShow = () => setShow((prev) => !prev);
 
   return (
     <div className="card-experience" onClick={toggleShow}>
-      <Image src={image} alt="logo" width={42} height={42} />
+      <div className="relative size-12">
+        <Image src={image} alt="logo" fill sizes="48px" className="object-cover"/>
+      </div>
       <div className="content">
         <div className="basic-info">
           <div>

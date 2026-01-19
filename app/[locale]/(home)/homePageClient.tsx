@@ -54,13 +54,16 @@ export default function HomePageClient({ data }: { data: any[] }) {
           </div>
           <a href={"/cv.pdf"} target="_blank" rel="noopener noreferrer">
             <div>
-              <div className="flex items-center justify-center gap-2 bg-white text-black w-40 h-12 mt-6 rounded-2xl">
-                <Image
-                  src={"/download.png"}
-                  alt="resume"
-                  width={20}
-                  height={20}
-                />
+              <div className="flex items-center justify-center gap-2 bg-black dark:bg-white text-black w-40 h-12 mt-6 rounded-2xl pointer-cursor">
+                <div className="relative size-5">
+                  <Image
+                    src={"/download.png"}
+                    alt="resume"
+                    fill
+                    sizes="20px"
+                    className="object-cover"
+                  />
+                </div>
                 <span>My resume</span>
               </div>
             </div>
