@@ -6,9 +6,6 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body>
-        {/* <div className="greeting">
-          <Image src="/greeting.gif" alt="meo" layout="fill" />
-        </div> */}
         {children}
       </body>
     </html>

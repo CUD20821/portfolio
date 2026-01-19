@@ -20,7 +20,7 @@ const ThemeSwitcher = () => {
 
 
   return (
-      <div className="switch" onClick={() => setTheme(currentTheme === "dark" ? "light" : "dark")}>
+      <div className="switch cursor-pointer" onClick={() => setTheme(currentTheme === "dark" ? "light" : "dark")}>
         <Image
           src={theme === "dark" ? "/off-bulb.png" : "/light-bulb.png"}
           alt="logo"

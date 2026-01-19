@@ -53,19 +53,8 @@ export default function HomePageClient({ data }: { data: any[] }) {
             <span className="highlight">{tHomepage("businessDomain")}</span>
           </div>
           <a href={"/cv.pdf"} target="_blank" rel="noopener noreferrer">
-            <div>
-              <div className="flex items-center justify-center gap-2 bg-black dark:bg-white text-black w-40 h-12 mt-6 rounded-2xl pointer-cursor">
-                <div className="relative size-5">
-                  <Image
-                    src={"/download.png"}
-                    alt="resume"
-                    fill
-                    sizes="20px"
-                    className="object-cover"
-                  />
-                </div>
-                <span>My resume</span>
-              </div>
+            <div className="resume">
+              <span>My resume</span>
             </div>
           </a>
           <div className="flex gap-6 items-center mt-6">
@@ -74,13 +63,12 @@ export default function HomePageClient({ data }: { data: any[] }) {
             ))}
           </div>
         </div>
-        <div className="flex justify-center relative">
+        <div className="flex justify-center relative size-[300px]">
           <Image
             src={"/me.jpeg"}
             alt="me"
-            width={300}
-            height={300}
-            className="rounded-full"
+            fill
+            className="rounded-full object-cover"
           />
         </div>
       </div>
@@ -100,7 +88,7 @@ export default function HomePageClient({ data }: { data: any[] }) {
                   duration={formatExperienceDuration(
                     ex.startDate,
                     ex.endDate,
-                    locale
+                    locale,
                   )}
                   place={ex.place}
                   description={ex.description}

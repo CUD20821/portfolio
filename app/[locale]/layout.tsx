@@ -68,7 +68,7 @@ export default async function LocaleLayout({
         enableColorScheme={false}
       >
         <Header />
-        <div className={`${notoSans.className} wrap`}>{children}</div>
+        <div className={`${notoSans.className} w-full max-w-5xl my-0 mx-auto min-h-[calc(100vh-130px)] py-20 px-8`}>{children}</div>
         <Footer />
       </ThemeProvider>
     </NextIntlClientProvider>
