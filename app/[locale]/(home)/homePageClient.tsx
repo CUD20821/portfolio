@@ -138,3 +138,4 @@ export default function HomePageClient({ data }: { data: any[] }) {
     </div>
   );
 }
+ 
