@@ -54,7 +54,7 @@ export default function HomePageClient({ data }: { data: any[] }) {
           </div>
           <a href={locale === "vi" ? "/resume/resume-vn.pdf" : "/resume/resume-jp.pdf"} target="_blank" rel="noopener noreferrer">
             <div className="resume">
-              <span>My resume</span>
+              <span>{locale === "vi" ? "My resume" : "職務経歴書"}</span>
             </div>
           </a>
           <div className="flex gap-6 items-center mt-6">
