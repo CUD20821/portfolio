@@ -68,16 +68,6 @@
   --shadow-custom: var(--shadow);
 }
 
-/* [data-theme="dark"] .highlight {
-  color: #ff8a6b;
-  box-shadow: rgba(255, 92, 57, 0.3) 0px -1.3rem inset;
-}
-
-[data-theme="light"] .highlight {
-  color: #ff4520;
-  box-shadow: rgba(255, 92, 57, 0.2) 0px -1.3rem inset;
-} */
-
 @layer base {
   body {
     @apply m-0 text-[14px] bg-bg-base text-text-heading flex justify-between flex-wrap items-start;
@@ -86,7 +76,6 @@
 }
 
 @layer components {
-  
 }
 
 @layer utilities {
@@ -118,6 +107,34 @@
   .resume:hover {
     background-position: left bottom;
     color: white;
+  }
+
+  .project-card {
+    /* Sử dụng các biến màu nền, đổ bóng, và padding chuẩn của global.css */
+    background-color: var(--bg-color);
+    box-shadow: var(--shadow);
+    border-radius: 8px; /* Giữ nguyên bo góc */
+    padding: 20px;
+    text-align: center;
+    width: 150px;
+    margin: 20px;
+
+    /* Sử dụng Tailwind @apply cho bố cục Flexbox hiện đại */
+    @apply flex flex-col justify-center items-center;
+  }
+
+  .card-header {
+    /* Sử dụng biến màu text-3 (muted) và text-sm/uppercase chuẩn Tailwind */
+    color: var(--text-2);
+    margin-bottom: 10px;
+    @apply text-sm uppercase;
+  }
+
+  .project-count {
+    /* Sử dụng biến màu text-2 (heading) và font-size lớn */
+    color: var(--text-2);
+    font-size: 48px;
+    @apply font-bold;
   }
 }
 

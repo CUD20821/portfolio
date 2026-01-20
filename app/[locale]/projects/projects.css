@@ -23,30 +23,3 @@
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12), 0 10px 15px var(--main);
 }
 
-.project-card {
-    background-color: #ffffff; /* Nền trắng sạch sẽ */
-    border-radius: 8px; /* Bo tròn góc nhẹ nhàng */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Thêm đổ bóng nhẹ để tạo chiều sâu */
-    padding: 20px; /* Khoảng đệm bên trong */
-    text-align: center; /* Căn giữa nội dung */
-    width: 150px; /* Đặt chiều rộng cố định */
-    margin: 8px; /* Khoảng cách với các phần tử khác */
-    display: flex; /* Dùng Flexbox để dễ dàng căn chỉnh */
-    flex-direction: column; /* Xếp các phần tử con theo chiều dọc */
-    justify-content: center; /* Căn giữa nội dung theo chiều dọc */
-    align-items: center; /* Căn giữa nội dung theo chiều ngang */
-}
-
-.card-header {
-    font-size: 14px;
-    color: #666; /* Màu xám nhạt cho tiêu đề */
-    margin-bottom: 10px; /* Khoảng cách với số lượng */
-    text-transform: uppercase; /* Viết hoa để nhấn mạnh */
-}
-
-.project-count {
-    font-size: 48px; /* Số lớn, đậm để nổi bật */
-    font-weight: 700;
-    color: #333; /* Màu đậm hơn để dễ đọc */
-    /* Bạn có thể thêm màu sắc thương hiệu của mình tại đây */
-}
