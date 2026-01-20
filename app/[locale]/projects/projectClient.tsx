@@ -88,37 +88,52 @@ export default function ProjectClient({
   }, [selectedCategory, datas]);
 
   return (
-    <div>
-      <div className="graphs">
-        <PieChart
-          graphTitle={locale === "vi" ? "Business Domain" : "ビジネス割合"}
-          stats={categoryStats}
-          onSelectCategory={setSelectedCategory}
-        />
-        <PieChart
-          graphTitle={locale === "vi" ? "Tech stack" : "技術割合"}
-          stats={techStackStats}
-          onSelectCategory={setSelectedCategory}
-        />
+    <div className="flex flex-col items-center relative">
+      {/* <div className="w-30 h-20 flex flex-col items-center justify-center bg-bg-base border-border-base border rounded-lg mb-6 mt-6">
+        <div className="text-[20px]">
+          {locale === "vi" ? <span>Projects</span> : <span>案件総数</span>}
+        </div>
+        <div className="text-[24px]">
+          {locale === "vi" ? `${datas.length}` : `${datas.length}件`}
+        </div>
+      </div> */}
+      <div className="project-card">
+        <div className="card-header">{locale === "vi" ? <span>Total</span> : <span>総数</span>}</div>
+        <div className="project-count">{locale === "vi" ? `${datas.length}` : `${datas.length}`}</div>
       </div>
-      <div className="filter-wrapper">
-        {/* Giữ wrapper DOM cố định để tránh thay đổi thứ tự node */}
-        {mounted && selectedCategory && (
-          <div>
-            <p>
-              Filtering by category:
-              <strong> {selectedCategory}</strong>
-            </p>
-            <Image
-              src={"/reset.png"}
-              alt="reset-btn"
-              width={32}
-              height={32}
-              onClick={() => setSelectedCategory(null)}
-              className="reset-btn"
-            />
-          </div>
-        )}
+      <div className="w-full">
+        <div className="flex gap-3 justify-evenly">
+          <PieChart
+            graphTitle={locale === "vi" ? "Business Domain" : "ビジネス"}
+            stats={categoryStats}
+            onSelectCategory={setSelectedCategory}
+          />
+          <PieChart
+            graphTitle={locale === "vi" ? "Tech stack" : "技術"}
+            stats={techStackStats}
+            onSelectCategory={setSelectedCategory}
+          />
+        </div>
+
+        <div className="filter-wrapper pl-4">
+          {/* Giữ wrapper DOM cố định để tránh thay đổi thứ tự node */}
+          {mounted && selectedCategory && (
+            <div>
+              <p>
+                Filtering by category:
+                <strong> {selectedCategory}</strong>
+              </p>
+              <Image
+                src={"/reset.png"}
+                alt="reset-btn"
+                width={32}
+                height={32}
+                onClick={() => setSelectedCategory(null)}
+                className="reset-btn"
+              />
+            </div>
+          )}
+        </div>
       </div>
 
       <div className="projects">
@@ -127,7 +142,9 @@ export default function ProjectClient({
             key={item.id}
             image={item.image}
             title={locale === "vi" ? item.titleVI : item.titleJP}
-            description={locale === "vi" ? item.descriptionVI : item.descriptionJP}
+            description={
+              locale === "vi" ? item.descriptionVI : item.descriptionJP
+            }
             url={item.url}
             type={"main"}
           />

@@ -1,4 +1,4 @@
-import { getCategoryStats, getTechStackStats } from "@/app/utils/graph";
+import { getCategoryStats, getTechStackStats} from "@/app/utils/graph";
 import ProjectClient from "./projectClient";
 import { getListMarkdownData } from "@/app/utils";
 
