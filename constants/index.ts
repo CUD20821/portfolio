@@ -11,7 +11,7 @@ export const dataSkill = [
 ];
 
 export const dataContact = [
-  { id: 1, img: "/contacts/github.png", url: "https://github.com/teq-ducle" },
+  { id: 1, img: "/contacts/github.png", url: "https://github.com/CUD20821" },
   {
     id: 2,
     img: "/contacts/linkedin.png",
