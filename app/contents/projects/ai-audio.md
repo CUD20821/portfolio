@@ -65,7 +65,7 @@ url: "/projects/ai-audio"
 
 2.&nbsp; Nhận được feedback tốt từ nhân viên của công ty
 
-- `Gần 80%` nhân viên cho biết họ "muốn sử dụng nó", "mong chờ" và "cảm thấy sẽ có lợi cho việc vận hành kinh doanh".
+- `Gần 80%` nhân viên cho biết họ "muốn sử dụng", "mong chờ" và "cảm thấy sẽ có lợi cho việc vận hành kinh doanh".
 - Tạo điều kiện để khách hàng cuối ký kết gia hạn hợp đồng
 
 3.&nbsp; Có kinh nghiệm khi dự án cần release gấp

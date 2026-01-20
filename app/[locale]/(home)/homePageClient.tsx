@@ -52,7 +52,7 @@ export default function HomePageClient({ data }: { data: any[] }) {
             {tHomepage("intro3")}{" "}
             <span className="highlight">{tHomepage("businessDomain")}</span>
           </div>
-          <a href={"/cv.pdf"} target="_blank" rel="noopener noreferrer">
+          <a href={locale === "vi" ? "/resume/resume-vn.pdf" : "/resume/resume-jp.pdf"} target="_blank" rel="noopener noreferrer">
             <div className="resume">
               <span>My resume</span>
             </div>
