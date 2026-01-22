@@ -92,7 +92,7 @@ export default function ProjectClient({
           {mounted && selectedCategory && (
             <div>
               <p>
-                Filtering by category:
+                {locale === "vi" ? "Filtering by category:" : "カテゴリで絞り込み中:"}
                 <strong> {selectedCategory}</strong>
               </p>
               <Image
