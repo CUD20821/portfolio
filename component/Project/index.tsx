@@ -12,16 +12,16 @@ interface ProjectProps {
 }
 
 function Project(props: ProjectProps) {
-  const { title, image, description, url, type } = props;
+  const { title, image, duration, description, url, type } = props;
 
   return (
     <>
       {type === "main" ? (
         <Link
           href={url}
-          className="flex flex-col gap-3 bg-bg-base rounded-lg cursor-pointer w-full p-3 justify-start hover:bg-(--bg-hover) transition-all duration-300 ease-in-out"
+          className="flex flex-col gap-2 bg-bg-base rounded-lg cursor-pointer w-full p-3 justify-start hover:bg-(--bg-hover) transition-all duration-300 ease-in-out"
         >
-          <div className="flex items-center gap-2 mb-4">
+          <div className="flex items-center gap-2 mb-2">
             <div className="relative size-12">
               <Image
                 src={image}
@@ -35,9 +35,8 @@ function Project(props: ProjectProps) {
               <span className="font-bold">{title}</span>
             </div>
           </div>
-          <div>
-            {description}
-          </div>
+          <div className="text-text-muted">{duration}</div>
+          <div>{description}</div>
         </Link>
       ) : (
         <Link

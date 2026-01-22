@@ -6,7 +6,7 @@ titleJP: "証券会社向け音声解析AIシステム"
 descriptionJP: "通話録音データを一元管理し、AI により音声内容を分析・要約。顧客プロフィールと連携し、営業担当者向けに提案情報を提供する社内システム。"
 link: ""
 tech: ["React", "Python"]
-date: "2024-12-01"
+duration: "2024-12 ~ Now"
 slug: ""
 image: "/projects/ai-audio.png"
 category: "AI"

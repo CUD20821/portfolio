@@ -56,7 +56,7 @@ const getListMarkdownData = async () => {
       descriptionJP: data.descriptionJP,
       link: data.link || "", // for project
       tech: data.tech || [], // for project
-      date: data.date,
+      duration: data.duration,
       slug: data.slug,
       image: data.image,
       category: data.category,

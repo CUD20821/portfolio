@@ -6,7 +6,7 @@ titleJP: "学校・こども総合保険"
 descriptionJP: "幼稚園から大学までを対象に、学校ごとにカスタマイズ可能な保険商品の申込・契約管理を行う保険"
 link: ""
 tech: ["NuxtJS", "GoLang"]
-date: "2025-07-01"
+duration: "2025-07 ~ 2026-01"
 slug: ""
 image: "/projects/insurance-school.png"
 category: "Insurance Tech"

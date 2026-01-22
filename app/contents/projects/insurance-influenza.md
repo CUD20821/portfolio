@@ -6,7 +6,7 @@ titleJP: "インフルエンザ保険"
 descriptionJP: "日本のインフルエンザ流行期に向けた短期型保険の申込・契約管理を提供する保険"
 link: ""
 tech: ["NuxtJS", "GoLang"]
-date: "2025-10-10"
+duration: "2025-10 ~ 2025-12"
 slug: ""
 image: "/projects/insurance-influenza.png"
 category: "Insurance Tech"

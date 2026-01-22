@@ -19,15 +19,6 @@ export default function ProjectClient({
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   datas: any[];
 }) {
-  // Old
-  // const [selectedCategory, setSelectedCategory] = useState<string | null>(
-  //   () => {
-  //     // window là biến khi js chạy ở client, nên cần check để không crash app
-  //     if (typeof window === "undefined") return null;
-  //     return sessionStorage.getItem("selectedCategory");
-  //   }
-  // );
-
   const { locale } = useParams();
   // New
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
@@ -59,25 +50,6 @@ export default function ProjectClient({
     }
   }, [selectedCategory, mounted]);
 
-  // // eslint-disable-next-line react-hooks/preserve-manual-memoization
-  // const filteredProjects = useMemo(() => {
-  //   // if (!selectedCategory) return dataProjects;
-  //   if (!selectedCategory) return datas;
-
-  //   // return dataProjects.filter(
-  //   //   (p) =>
-  //   //     p.category === selectedCategory || p.tech.includes(selectedCategory)
-  //   // );
-  //   return datas.filter((p) => {
-  //     return (
-  //       p.category === selectedCategory || p.tech.includes(selectedCategory)
-  //     );
-  //   });
-  //   // return datas.filter(
-  //   //   p.category === selectedCategory || p.tech.includes(selectedCategory)
-  //   // );
-  // }, [selectedCategory]);
-
   const filteredProjects = useMemo(() => {
     if (!selectedCategory) return datas;
     return datas.filter((i) => {
@@ -89,17 +61,13 @@ export default function ProjectClient({
 
   return (
     <div className="flex flex-col items-center relative">
-      {/* <div className="w-30 h-20 flex flex-col items-center justify-center bg-bg-base border-border-base border rounded-lg mb-6 mt-6">
-        <div className="text-[20px]">
-          {locale === "vi" ? <span>Projects</span> : <span>案件総数</span>}
-        </div>
-        <div className="text-[24px]">
-          {locale === "vi" ? `${datas.length}` : `${datas.length}件`}
-        </div>
-      </div> */}
       <div className="project-card">
-        <div className="card-header">{locale === "vi" ? <span>Total</span> : <span>総数</span>}</div>
-        <div className="project-count">{locale === "vi" ? `${datas.length}` : `${datas.length}`}</div>
+        <div className="card-header">
+          {locale === "vi" ? <span>Total</span> : <span>総数</span>}
+        </div>
+        <div className="project-count">
+          {locale === "vi" ? `${datas.length}` : `${datas.length}`}
+        </div>
       </div>
       {/* 
       Trung bình nhân sự mỗi dự án(MM)
@@ -145,6 +113,7 @@ export default function ProjectClient({
           <Project
             key={item.id}
             image={item.image}
+            duration={item.duration}
             title={locale === "vi" ? item.titleVI : item.titleJP}
             description={
               locale === "vi" ? item.descriptionVI : item.descriptionJP
