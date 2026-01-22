@@ -5,6 +5,7 @@ import { Link } from "@/i18n/routing";
 interface ProjectProps {
   title: string;
   image: string;
+  duration: string;
   description: string;
   url: string;
   type?: string;
@@ -16,29 +17,45 @@ function Project(props: ProjectProps) {
   return (
     <>
       {type === "main" ? (
-        <Link href={url} className="card">
-          <div className="card-header">
+        <Link
+          href={url}
+          className="flex flex-col gap-3 bg-bg-base rounded-lg cursor-pointer w-full p-3 justify-start hover:bg-(--bg-hover) transition-all duration-300 ease-in-out"
+        >
+          <div className="flex items-center gap-2 mb-4">
             <div className="relative size-12">
-              <Image src={image} alt="logo" fill sizes="48px" className="object-cover"/>
+              <Image
+                src={image}
+                alt="logo"
+                fill
+                sizes="48px"
+                className="object-cover"
+              />
             </div>
             <div>
-              <span className="project-title">{title}</span>
+              <span className="font-bold">{title}</span>
             </div>
           </div>
-          <div className="card-body">
-            <div>
-              <span className="project-description">{description}</span>
-            </div>
+          <div>
+            {description}
           </div>
         </Link>
       ) : (
-        <Link href={url} className="card sub">
+        <Link
+          href={url}
+          className="flex gap-3 bg-bg-base rounded-lg cursor-pointer w-full p-3 justify-start transition-all duration-300 ease-in-out hover:bg-(--bg-hover)"
+        >
           <div className="relative size-12">
-            <Image src={image} alt="logo" fill sizes="48px" className="object-cover"/>
+            <Image
+              src={image}
+              alt="logo"
+              fill
+              sizes="48px"
+              className="object-cover"
+            />
           </div>
-          <div className="content">
-            <p className="project-title">{title}</p>
-            <p className="sub-project-description">{description}</p>
+          <div className="flex-1">
+            <p className="font-bold">{title}</p>
+            <p className="line-clamp-2">{description}</p>
           </div>
         </Link>
       )}

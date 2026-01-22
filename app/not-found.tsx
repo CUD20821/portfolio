@@ -1,6 +1,6 @@
 "use client";
 // import { useEffect } from "react";
-import "@/app/globals.css";
+import "@/app/global.css";
 import Link from "next/link";
 // import { useRouter } from "next/navigation";
 export default function NotFound() {

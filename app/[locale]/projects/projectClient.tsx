@@ -101,6 +101,10 @@ export default function ProjectClient({
         <div className="card-header">{locale === "vi" ? <span>Total</span> : <span>総数</span>}</div>
         <div className="project-count">{locale === "vi" ? `${datas.length}` : `${datas.length}`}</div>
       </div>
+      {/* 
+      Trung bình nhân sự mỗi dự án(MM)
+      Thời gian trung bình của mỗi dự án
+       */}
       <div className="w-full">
         <div className="flex gap-3 justify-evenly">
           <PieChart
