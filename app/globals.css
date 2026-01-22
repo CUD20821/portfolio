@@ -126,7 +126,6 @@
   .card-header {
     /* Sử dụng biến màu text-3 (muted) và text-sm/uppercase chuẩn Tailwind */
     color: var(--text-2);
-    margin-bottom: 10px;
     @apply text-sm uppercase;
   }
 
