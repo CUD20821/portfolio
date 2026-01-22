@@ -5,14 +5,15 @@ import { Link } from "@/i18n/routing";
 interface ProjectProps {
   title: string;
   image: string;
-  duration?: string;
+  start?: string;
+  end?: string;
   description: string;
   url: string;
   type?: string;
 }
 
 function Project(props: ProjectProps) {
-  const { title, image, duration, description, url, type } = props;
+  const { title, image, start, end, description, url, type } = props;
 
   return (
     <>
@@ -35,7 +36,7 @@ function Project(props: ProjectProps) {
               <span className="font-bold">{title}</span>
             </div>
           </div>
-          <div className="text-text-muted">{duration}</div>
+          <div className="text-text-muted">{start} ~ {end}</div>
           <div>{description}</div>
         </Link>
       ) : (

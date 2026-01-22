@@ -113,7 +113,8 @@ export default function ProjectClient({
           <Project
             key={item.id}
             image={item.image}
-            duration={item.duration}
+            start={item.start}
+            end={item.end}
             title={locale === "vi" ? item.titleVI : item.titleJP}
             description={
               locale === "vi" ? item.descriptionVI : item.descriptionJP
