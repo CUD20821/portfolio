@@ -5,7 +5,7 @@ import { Link } from "@/i18n/routing";
 interface ProjectProps {
   title: string;
   image: string;
-  duration: string;
+  duration?: string;
   description: string;
   url: string;
   type?: string;
