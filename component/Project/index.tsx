@@ -33,7 +33,7 @@ function Project(props: ProjectProps) {
               />
             </div>
             <div>
-              <span className="font-bold">{title}</span>
+              <span className="font-bold flex-1">{title}</span>
             </div>
           </div>
           <div className="text-text-muted">{start} ~ {end}</div>

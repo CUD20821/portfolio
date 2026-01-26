@@ -22,7 +22,7 @@ function Experience(props: ExperienceProps) {
       <div className="relative size-12">
         <Image src={image} alt="logo" fill sizes="48px" className="object-cover"/>
       </div>
-      <div className="content">
+      <div className="content flex-1">
         <div className="basic-info">
           <div>
             <span className="position">{position}</span>

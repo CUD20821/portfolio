@@ -1,6 +1,6 @@
 ---
 id: "ai-audio"
-titleVI: "Hệ thống tích hợp AI để phân tích ghi âm của công ty chứng khoán"
+titleVI: "Hệ thống tích hợp AI để phân tích ghi âm"
 descriptionVI: "Hệ thống lưu trữ, tạo ghi âm, tích hợp AI vào phân tích nội dung audio để suggest thông tin dựa vào hồ sơ khách hàng"
 titleJP: "証券会社向け音声解析AIシステム"
 descriptionJP: "通話録音データを一元管理し、AI により音声内容を分析・要約。顧客プロフィールと連携し、営業担当者向けに提案情報を提供する社内システム。"
