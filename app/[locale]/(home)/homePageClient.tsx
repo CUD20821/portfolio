@@ -8,7 +8,7 @@ import { formatExperienceDuration } from "@/app/utils/formatExperienceDuration";
 import Skill from "@/component/Skill";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
-import "./home.css";
+// import "./home.css";
 import Social from "@/component/Social";
 import viMessages from "@/messages/vi.json";
 import jaMessages from "@/messages/ja.json";
@@ -35,10 +35,10 @@ export default function HomePageClient({ data }: { data: any[] }) {
 
   return (
     <div>
-      <div className="grid lg:grid-cols-[600px_1fr] gap-12 lg:gap-10 items-center">
+      <div className="flex flex-col-reverse lg:grid lg:grid-cols-[600px_1fr] gap-12 lg:gap-10 items-center">
         <div className="w-full">
-          <h2 className="greeting">{tHomepage("greeting")}</h2>
-          <h1 className="intro">
+          <h2 className="text-[40px] mb-0">{tHomepage("greeting")}</h2>
+          <h1 className="text-[60px]">
             {tHomepage("intro1")}{" "}
             <span className="highlight">{tHomepage("name")}</span>
           </h1>
@@ -72,13 +72,13 @@ export default function HomePageClient({ data }: { data: any[] }) {
           />
         </div>
       </div>
-      <div className="content-parent">
-        <div className="content-col-1">
-          <div className="box">
-            <div className="hp-title">
-              <span>{tHomepage("experienceTitle")}</span>
+      <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-4 lg:gap-2.5 mt-6">
+        <div className="flex flex-col w-full lg:w-[60%] gap-4">
+          <div className="flex flex-col border border-main rounded-lg p-6 gap-2.5">
+            <div className="font-bold text-main flex justify-center">
+              <span className="hover:underline cursor-pointer">{tHomepage("experienceTitle")}</span>
             </div>
-            <div className="sub-items">
+            <div className="flex flex-col gap-2">
               {experiences.map((ex) => (
                 <Experience
                   key={ex.id}
@@ -97,13 +97,13 @@ export default function HomePageClient({ data }: { data: any[] }) {
             </div>
           </div>
         </div>
-        <div className="content-col-2">
-          <div className="box">
-            <div className="hp-title">
-              <span>{tHomepage("projectsTitle")}</span>
+        <div className="flex flex-col w-full lg:w-[40%] gap-4">
+          <div className="flex flex-col border border-main rounded-lg p-6 gap-2.5">
+            <div className="font-bold text-main flex justify-center">
+              <span className="hover:underline cursor-pointer">{tHomepage("projectsTitle")}</span>
             </div>
-            <div className="sub-items">
-              <div className="sub-project-container">
+            <div className="flex flex-col gap-2">
+              <div className="flex flex-col gap-4">
                 {data.map((item) => (
                   <Project
                     key={item.id}
@@ -118,16 +118,16 @@ export default function HomePageClient({ data }: { data: any[] }) {
               </div>
             </div>
             <div>
-              <Link href={"/projects"} className="seemore">
+              <Link href={"/projects"} className="w-full h-10 flex justify-center items-center rounded-lg cursor-pointer font-semibold transition-all ease-300 text-text-heading hover:text-main hover:border hover:border-main hover:bg-transparent bg-(--border-color)">
                 {tHomepage("seeAllProjects")}
               </Link>
             </div>
           </div>
-          <div className="box">
-            <p className="hp-title">
-              <span>{tHomepage("skillsTitle")}</span>
+          <div className="flex flex-col border border-main rounded-lg p-6 gap-2.5">
+            <p className="font-bold text-main flex justify-center">
+              <span className="hover:underline cursor-pointer">{tHomepage("skillsTitle")}</span>
             </p>
-            <div className="skill-items">
+            <div className="line-clamp-2 w-full">
               {dataSkill.map((item) => (
                 <Skill key={item.id} name={item.name} />
               ))}
